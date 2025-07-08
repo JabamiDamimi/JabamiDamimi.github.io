@@ -1,0 +1,115 @@
+/* Footer ===================================================================== */
+.ft
+    position: relative
+    background: cr(gy-f9)
+    padding-top: vw(170)
+    &_wp
+        &-info
+            +flex($jc: sb)
+        &-copyright
+    &_gotop    
+        position: absolute
+        top: -35px
+        right: 5%
+        z-index: 9999
+        +trs()
+        &.is
+            &-show
+                opacity: 1
+            &-move
+                position: fixed
+                top: auto
+                bottom: 20px
+                right: 20px
+            &-top
+                opacity: 0
+                pointer-events: none
+    +rwdw-max(1440)
+        +pd(y, rem(15))
+        &_gotop
+            top: -90px
+    +rwdw-max()
+        &_wp-info
+            flex-direction: column
+            // justify-content: center
+            align-items: center
+    +rwdw-max(sm)
+        &_wp
+            flex-direction: column
+
+.ft-list
+    max-width: 350px
+    &_head
+        font-size: rem(18)
+        color: cr(black)
+        font-weight: bold
+        font-family: font(rhd)
+        margin-bottom: 30px
+    &_body
+    &_ul
+        &--data
+            > *
+                position: relative
+                padding-left: 25px
+            i
+                position: absolute
+                top: 2px
+                left: 0px
+                color: cr(gy-666)
+        &--community
+            +flex()
+            +mg(x, -5px)
+            > *
+                +pd(x, 5px)
+    &_li
+        color: cr(black)
+        margin-bottom: 10px
+    &_link
+        color: cr(black)
+    +rwdw-min()
+        &_link:hover
+            color: cr(pink)
+        &_ul--data
+            a:hover
+                color: cr(pink)
+        &_ul--community
+            a:hover
+                color: cr(pink)
+    +rwdw-max()
+        width: 100%
+        &:not(:last-child)
+            margin-bottom: 30px
+        &_head
+            // text-align: center
+        &_ul--community
+            > *
+                font-size: rem(35)
+            a
+                color: cr(gy-999)
+
+.ft-copyright
+    +flex($jc: sb)
+    font-size: rem(14)
+    color: cr(black)
+    padding: 30px
+    border-top: 1px solid cr(gy-ed)
+    margin-top: vw(130)
+    &_text
+    &_ul
+        +flex()
+        +mg(x, vw(-10))
+    &_li
+        +pd(x, vw(10))
+    +rwdw-min()
+        &_link:hover
+            color: cr(pink)
+    +rwdw-max()
+        flex-direction: column
+        align-items: center
+        &_text
+            margin-bottom: 30px
+    +rwdw-max(sm)
+        text-align: center
+        padding: 30px 15px
+    +rwdw-max(480)
+        padding: 30px 10px

@@ -1,0 +1,15 @@
+/* Search ===================================================================== */ 
+.search-list
+    +flex($fw: wrap)
+    +mg(x, -15px)
+
+    &_item
+        width: calc(100%/4)
+        +pd(x, 15px)
+        margin-bottom: 30px
+    +rwdw-max(md)
+        &_item
+            +fl-item(50%)
+    +rwdw-max(sm)
+        &_item
+            +fl-item(100%)

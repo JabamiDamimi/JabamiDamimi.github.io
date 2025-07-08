@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+    <head>
+        <!-- Title and Meta 
+        =============================================================================== -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Demo</title>
+        <meta name="author" content="" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0" />
+        <meta name="format-detection" content="telephone=no">
+
+        <!-- ico 
+        =============================================================================== -->
+        <link rel="icon" type="image/x-icon" href="img/common/web-icon.ico" />
+
+        <!-- fontawesome Icon || IcoMoon Icon
+        =============================================================================== -->
+        <!-- <link rel="stylesheet" href="css/fontawesome/css/all.min.css"> -->
+        <link rel="stylesheet" href="css/icon.css">
+
+        <!-- Google Fonts 
+        =============================================================================== -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="js/plugin/aos/aos.css">
+        <link rel="stylesheet" href="js/plugin/swiper/swiper.min.css">
+        <link rel="stylesheet" href="js/plugin/fancybox/jquery.fancybox.min.css">
+        <link rel="stylesheet" href="js/plugin/tab/easy-responsive-tabs.css">
+
+        <!-- Web Style
+        =============================================================================== -->
+        <link rel="stylesheet" type="text/css" href="css/module.css">
+        <link rel="stylesheet" type="text/css" href="css/plugin.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/edit.css">
+    </head>
+<body data-id="products">
+    <h1 class="u-t-hide"></h1>
+    <div class="l-wp-html">
+        <header class="hd" data-aos="fade-down">
+            <div class="hd_wp l-wp-1366">
+                <a href="index.html" class="hd_logo">
+                    <img src="img/common/logo.svg" alt="">
+                </a>
+                <div class="hd_toggle">
+                    <span class="hd_toggle-bar"></span>
+                    <span class="hd_toggle-bar"></span>
+                    <span class="hd_toggle-bar"></span>
+                </div>
+                <div class="hd_nav">
+                    <div class="hd_nav_main">
+                        <nav class="menu">
+                            <ul class="menu_list">
+                                <li class="menu_item" data-active="index"><a href="index.html" class="menu_link">首頁</a></li>
+                                <li class="menu_item" data-active="about">
+                                    <a href="products.html" class="menu_link">商品分類</a>
+                                    <div class="dropdown">
+                                        <a href="products.html" class="dropdown_link">內衣系列</a>
+                                        <a href="products.html" class="dropdown_link">童裝系列</a>
+                                        <a href="products.html" class="dropdown_link">保養品系列</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="hd_nav_sub">
+                        <div class="submenu">
+                            <div class="submenu_list lang u-hide">
+                                <div class="submenu_btn lang_toggle">
+                                    <span class="lang_name">EN</span>
+                                </div>
+                                <div class="lang_ctr">
+                                    <a href="" class="lang_link">TW</a>
+                                    <a href="" class="lang_link">EN</a>
+                                </div>
+                            </div>
+                            <div class="submenu_list">
+                                <div class="m-btn js-search-open">
+                                    <i class="icon-loupe"></i>
+                                </div>
+                            </div>
+                            <div class="submenu_list">
+                                <a href="" target="_blank" rel="noopener noreferrer" class="submenu_link"><i class="icon-shopping-bag"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="l-wp-main">
+            <div class="m-bn m-bn--inside">
+                <div class="m-bn_wp">
+                    <div class="m-bn_ctr">
+                        <div class="m-bn_img" data-aos="zoom-out" data-aos-duration="3000">
+                            <div class="m-bn_img_el" data-imgfix="out">
+                                <img src="img/test.jpg" alt="">
+                                <!-- 1920x350 -->
+                            </div>
+                        </div>
+                        <div class="m-bn_info">
+                            <div class="m-path">
+                                <div class="m-path_wp">
+                                    <ul class="m-path_list">
+                                        <li class="m-path_item">
+                                            <a href="index.html" class="m-path_link">首頁</a>
+                                        </li>
+                                        <li class="m-path_item">Products</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="m-bn_title">
+                                Products
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="c-stn">
+                <div class="c-stn_wp c-stn_wp--col2 l-wp-1366">
+                    <div class="c-stn_side">
+                        <div class="c-side">
+                            <div class="c-side_hamburger">
+                                <div class="c-side_hamburger-name">Hamburger</div>
+                                <div class="c-side_hamburger-icon">
+                                    <span class="c-side_bar"></span><span class="c-side_bar"></span><span class="c-side_bar"></span>
+                                </div>
+                            </div>
+                            <div class="c-side_ctr">
+                                <div class="c-side_toggle">內衣系列</div>
+
+                                <div class="c-side_toggle is-active">童裝系列</div>
+                                <ul class="c-side_ul">
+                                    <li class="c-side_li is-active"><a href="" class="c-side_link">test item</a></li>
+                                    <li class="c-side_li"><a href="" class="c-side_link">test item</a></li>
+                                </ul>
+                                <div class="c-side_toggle">保養品系列</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-stn_ctr">
+                        <ul class="pro-list">
+                            <li class="pro-list_item" data-aos="fade-up">
+                                <div class="m-crd m-crd--pro" data-href="products-detail.html">
+                                    <div class="m-crd_pic" data-imgfix="in">
+                                        <img src="https://placehold.co/400x300" alt="">
+                                    </div>
+                                    <div class="m-crd_info">
+                                        <div class="m-crd_name">Name</div>
+                                        <div class="m-crd_price" data-unit="NT">599</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="pro-list_item" data-aos="fade-up">
+                                <div class="m-crd m-crd--pro" data-href="products-detail.html">
+                                    <div class="m-crd_pic" data-imgfix="in">
+                                        <img src="https://placehold.co/400x300" alt="">
+                                    </div>
+                                    <div class="m-crd_info">
+                                        <div class="m-crd_name">Name</div>
+                                        <div class="m-crd_price" data-unit="NT">599</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="pro-list_item" data-aos="fade-up">
+                                <div class="m-crd m-crd--pro" data-href="products-detail.html">
+                                    <div class="m-crd_pic" data-imgfix="in">
+                                        <img src="https://placehold.co/400x300" alt="">
+                                    </div>
+                                    <div class="m-crd_info">
+                                        <div class="m-crd_name">Name</div>
+                                        <div class="m-crd_price" data-unit="NT">599</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="pro-list_item" data-aos="fade-up">
+                                <div class="m-crd m-crd--pro" data-href="products-detail.html">
+                                    <div class="m-crd_pic" data-imgfix="in">
+                                        <img src="https://placehold.co/400x300" alt="">
+                                    </div>
+                                    <div class="m-crd_info">
+                                        <div class="m-crd_name">Name</div>
+                                        <div class="m-crd_price" data-unit="NT">599</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="pro-list_item" data-aos="fade-up">
+                                <div class="m-crd m-crd--pro" data-href="products-detail.html">
+                                    <div class="m-crd_pic" data-imgfix="in">
+                                        <img src="https://placehold.co/400x300" alt="">
+                                    </div>
+                                    <div class="m-crd_info">
+                                        <div class="m-crd_name">Name</div>
+                                        <div class="m-crd_price" data-unit="NT">599</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="pro-list_item" data-aos="fade-up">
+                                <div class="m-crd m-crd--pro" data-href="products-detail.html">
+                                    <div class="m-crd_pic" data-imgfix="in">
+                                        <img src="https://placehold.co/400x300" alt="">
+                                    </div>
+                                    <div class="m-crd_info">
+                                        <div class="m-crd_name">Name</div>
+                                        <div class="m-crd_price" data-unit="NT">599</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="pro-list_item" data-aos="fade-up">
+                                <div class="m-crd m-crd--pro" data-href="products-detail.html">
+                                    <div class="m-crd_pic" data-imgfix="in">
+                                        <img src="https://placehold.co/400x300" alt="">
+                                    </div>
+                                    <div class="m-crd_info">
+                                        <div class="m-crd_name">Name</div>
+                                        <div class="m-crd_price" data-unit="NT">599</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="pro-list_item" data-aos="fade-up">
+                                <div class="m-crd m-crd--pro" data-href="products-detail.html">
+                                    <div class="m-crd_pic" data-imgfix="in">
+                                        <img src="https://placehold.co/400x300" alt="">
+                                    </div>
+                                    <div class="m-crd_info">
+                                        <div class="m-crd_name">Name</div>
+                                        <div class="m-crd_price" data-unit="NT">599</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="pro-list_item" data-aos="fade-up">
+                                <div class="m-crd m-crd--pro" data-href="products-detail.html">
+                                    <div class="m-crd_pic" data-imgfix="in">
+                                        <img src="https://placehold.co/400x300" alt="">
+                                    </div>
+                                    <div class="m-crd_info">
+                                        <div class="m-crd_name">Name</div>
+                                        <div class="m-crd_price" data-unit="NT">599</div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <nav class="m-page">
+                            <ul class="m-page_list">
+                                <li class="m-page_item m-page_item--prev"><a href="" class="m-page_link"><i class="icon-chevron-left"></i></a></li>
+                                <li class="m-page_item is-active"><a href="" class="m-page_link">1</a></li>
+                                <li class="m-page_item"><a href="" class="m-page_link">2</a></li>
+                                <li class="m-page_item"><a href="" class="m-page_link">3</a></li>
+                                <li class="m-page_item m-page_item--next"><a href="" class="m-page_link"><i class="icon-chevron-right"></i></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>                
+            </div>
+
+        </div>
+
+        <footer class="ft"> 
+            <div class="ft_wp l-wp-1200">
+                <div class="ft_wp-info">
+                    <div class="ft-list">
+                        <div class="ft-list_head">聯絡資訊</div>
+                        <div class="ft-list_body">
+                            <ul class="ft-list_ul ft-list_ul--data">
+                                <li class="ft-list_li"><i class="icon-phone"></i><a href="tel:+88604000000">04-000000</a></li>
+                                <li class="ft-list_li"><i class="icon-mail"></i><a href="mailto:info@mail.com">info@mail.com</a></li>
+                                <li class="ft-list_li"><i class="icon-map-pin"></i><a href="javascript:void(0)" rel="noopener noreferrer">Demo Rd., Demo., Demo 4000614 , Taiwan (R.O.C.)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ft-list u-show-pc">
+                        <div class="ft-list_head">Demo</div>
+                        <div class="ft-list_body">
+                            <ul class="ft-list_ul">
+                                <li class="ft-list_li"><a href="about.html" class="ft-list_link">Demo</a></li>
+                                <li class="ft-list_li"><a href="javascript:void(0)" rel="noopener noreferrer" class="ft-list_link">前往賣場</a></li>
+                                <li class="ft-list_li"><a href="news.html" class="ft-list_link">最新消息</a></li>
+                                <!-- <li class="ft-list_li"><a href="" class="ft-list_link">品牌日誌</a></li> -->
+                                <div class="ft-list_li"><a href="contact.html" class="ft-list_link">聯絡我們</a></div>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ft-list">
+                        <div class="ft-list_head">社群</div>
+                        <div class="ft-list_body">
+                            <ul class="ft-list_ul ft-list_ul--community">
+                                <li class="ft-list_li"><a href="" target="_blank" rel="noopener noreferrer" class="icon-facebook"></a></li>
+                                <li class="ft-list_li"><a href="" target="_blank" rel="noopener noreferrer" class="icon-line"></a></li>
+                                <!-- <li class="ft-list_li"><a href="" target="_blank" rel="noopener noreferrer" class="icon-twitter"></a></li> -->
+                                <li class="ft-list_li"><a href="" target="_blank" rel="noopener noreferrer" class="icon-instagram"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ft_wp l-wp-1366">
+                <div class="ft_wp-copyright">
+                    <div class="ft-copyright">
+                        <div class="ft-copyright_text">
+                            copyright © Demo all right reserved.
+                        </div>
+                        <ul class="ft-copyright_ul">
+                            <li class="ft-copyright_li"><a href="" class="ft-copyright_link">網站使用款</a></li>
+                            <li class="ft-copyright_li"><a href="" class="ft-copyright_link">隱私權政策</a></li>
+                            <li class="ft-copyright_li"><a href="" class="ft-copyright_link">免責聲明</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ft_gotop">
+                <div class="m-btn m-btn--gotop">
+                    <div class="m-btn_icon"></div>
+                    <div class="m-btn_name">TOP</div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <script src="js/plugin/jquery/jquery-3.3.1.min.js"></script>
+    <script src="js/plugin/aos/aos.js"></script>
+    <script src="js/plugin/fancybox/jquery.fancybox.min.js"></script>
+    <script src="js/plugin/swiper/swiper.min.js"></script>
+    <script src="js/tool.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>

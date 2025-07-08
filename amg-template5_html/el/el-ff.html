@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Atomic Design</title>
+    <meta name="title" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="web design,網頁設計,web,網頁,網站,設計,前端" />
+    <meta name="copyright" content="" />
+    <link rel="canonical" href="網址" itemprop="url" />
+    <link rel="stylesheet" href="../css/module.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/el.css">
+</head>
+
+<body id="el">
+    <div class="ad-bx js-vue">
+        <h2 class="ad-h2">Font-Family</h2>
+        <div class="ad-ff row" v-for="val in ff">
+            <p class="ad-pre-name">u-ff-</p>
+            <div class="col-md-12">
+                <div class="ad-item-sass"><span>{{val.name}}</span></div>
+                <div class="ad-item-fontname"><span :class="'u-ff-' + val.name">{{val.code}}</span></div>
+                <div class="ad-item-class"><span>u-ff-{{val.name}}</span></div>
+                <div class="ad-item-src"><a :href="val.link" target="_blank" class="ad-bk_link">{{val.link}}</a></div>
+            </div>
+            <div class="col-md-6">
+                <h3 class="ad-h3">Chinese Font</h3>
+                <h1 class="ad-item" :class="'u-ff-' + val.name">{{val.code}}</h1>
+                <h2 class="ad-item" :class="'u-ff-' + val.name">{{val.code}}</h2>
+                <h3 class="ad-item" :class="'u-ff-' + val.name">{{val.code}}</h3>
+                <h4 class="ad-item" :class="'u-ff-' + val.name">{{val.code}}</h4>
+                <h5 class="ad-item" :class="'u-ff-' + val.name">{{val.code}}</h5>
+                <h6 class="ad-item" :class="'u-ff-' + val.name">{{val.code}}</h6>
+                <p class="ad-item" :class="'u-ff-' + val.name">
+                    起麼中了記交關言由種到們有你排大子，業不已不工居死馬安影出濟印將，趣效看......法學大靜位開消會此訴各星度後亞人南計傷法，樣加產女；醫價反！元世紅車，沒進沒國正資知，界不上書創修出美急人省多來，地路的原...服否一居聲景當勢科對！容了相興道不辦喜，品賣望銀這們許眼多光縣？一是高界關究滿證持安生。洲國會標正向，我報見大，竟所計張盡認。他生居上就我來向這作面居線發人都人學然魚病英。
+                </p>
+            </div>
+            <div class="col-md-6">
+                <h3 class="ad-h3">English Font</h3>
+                <h1 class="ad-item" :class="'u-ff-' + val.name">{{val.code}}</h1>
+                <h2 class="ad-item" :class="'u-ff-' + val.name">{{val.code}}</h2>
+                <h3 class="ad-item" :class="'u-ff-' + val.name">{{val.code}}</h3>
+                <h4 class="ad-item" :class="'u-ff-' + val.name">{{val.code}}</h4>
+                <h5 class="ad-item" :class="'u-ff-' + val.name">{{val.code}}</h5>
+                <h6 class="ad-item" :class="'u-ff-' + val.name">{{val.code}}</h6>
+                <p class="ad-item" :class="'u-ff-' + val.name">This is a paragraph</p>
+                <p class="ad-item" :class="'u-ff-' + val.name">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure eum earum pariatur quas magnam illum
+                    a neque reiciendis!
+                    Itaque quasi doloribus perspiciatis natus mollitia quae nesciunt ullam assumenda pariatur
+                    dignissimos. Eius consequuntur
+                    cupiditate ipsum ratione provident eos, omnis sit, recusandae tempore accusamus aspernatur
+                    voluptatum quaerat
+                    consequatur quidem! Aliquam, quas soluta.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/plugin/jquery/jquery-3.3.1.min.js"></script>
+    <script src="../js/plugin/vue/vue.min.js"></script>
+    <script src="../js/tool.js"></script>
+    <script>
+        $(function () {
+            new Vue({
+                el: '.js-vue',
+                data: {
+                    ff: [
+                        {name: 'default', code: 'Arial, "Microsoft JhengHei", sans-serif', link: 'null'},
+                        {name: 'dfk', code: 'DFKai-sb', link: 'null'},
+                    ],
+                },
+            })
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+/* Banner (m-bn) ============================================================== */
+$bnWidth: 1920
+$bnHeight: 300
+$bnMask: false // true, false
+$bnMaskStyle: style01
++md-banner()
+
+.m-bn--index
+    background: $reColor
+    .m-bn
+        &_wp
+            &-bg
+                position: absolute
+                bottom: 0px
+                left: 0px
+                z-index: 10
+        &_ctr
+        &_img
+            &_el
+                +md-imgfix-h(800, 1920)
+        &_info
+            justify-content: flex-start
+            align-items: flex-end
+
+        &_pagination
+            position: absolute
+            left: 50%
+            bottom: 20px
+            transform: translateX(-50%)
+            .swiper-pagination-bullet
+                +mg(x, 5px)
+                background: rgba(cr(white), .9)
+                &-active
+                    background: cr(pink)
+
+    +rwdw-max(1440)
+        .m-bn
+            
+
+    +rwdw-max()
+        .m-bn
+            
+
+    +rwdw-max(sm)
+        .m-bn
+            &_img
+                &_el
+                    +md-imgfix-h(800, 575)
+            &_info
+
+.m-bn--inside
+    background: $reColor
+    .m-bn
+        &_wp
+            &-bg
+                position: absolute
+                bottom: 0px
+                left: 0px
+                z-index: 10
+        &_img
+            &_el
+                +md-imgfix-h(350, 1920)
+        &_info
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            +flex($fd: column)
+        &_title
+            font-size: rem(50)
+            color: cr(white)
+            font-weight: bold
+    +rwdw-max(pc)
+        .m-bn
+            &_title
+                font-size: rem(40)
+    +rwdw-max()
+        .m-bn
+            &_img
+                &_el
+                    +md-imgfix-h(350, $rwd)
+    +rwdw-max(sm)
+        .m-bn
+            &_img
+                &_el
+                    +md-imgfix-h(350, 575)
+            &_title
+                font-size: rem(30)

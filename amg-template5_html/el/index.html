@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Atomic Design</title>
+    <meta name="title" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="web design,網頁設計,web,網頁,網站,設計,前端" />
+    <meta name="copyright" content="" />
+    <link rel="canonical" href="網址" itemprop="url" />
+    <link rel="stylesheet" href="../css/module.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/el.css">
+</head>
+
+<body>
+    <div class="l-wp-html">
+        <header class="elhd">
+            <div class="elhd_l-wp l-wp-1680">
+                <div class="elhd_logo">Atomic Design</div>
+                <div class="elhd_toggle">
+                    <span class="elhd_toggle-bar"></span>
+                    <span class="elhd_toggle-bar"></span>
+                    <span class="elhd_toggle-bar"></span>
+                </div>
+                <div class="elmenu">
+                    <ul class="elmenu_ctr">
+                        <li v-for="val in menu" class="elmenu_item" v-bind:data-import="val.link">{{val.name}}</li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main class="l-wp-main">
+            <div class="elstn-body">
+                <div class="elbody-close"></div>
+                <div class="elbody-ir"></div>
+            </div>
+            <div class="elstn-info m-edit">
+
+                <h4>Atomic Design</h4>
+                <p>depiction ...</p>
+
+            </div>
+        </main>
+        <footer class="elft"></footer>
+    </div>
+    <script src="../js/plugin/jquery/jquery-3.3.1.min.js"></script>
+    <script src="../js/plugin/vue/vue.min.js"></script>
+    <script src="../js/tool.js"></script>
+    <script src="el.js"></script>
+    <script>
+        new Vue({
+            el: '.l-wp-html',
+            data: {
+                menu: [{
+                        name: 'Structure',
+                        link: 'el-structure.html'
+                    },
+                    // {
+                    //     name: 'Utillity',
+                    //     link: 'el-utillity.html'
+                    // },
+                    {
+                        name: 'Fonts Color',
+                        link: 'el-fc.html'
+                    },
+                    {
+                        name: 'Background Color',
+                        link: 'el-bgc.html'
+                    },
+                    {
+                        name: 'ICON',
+                        link: 'el-icon.html'
+                    },
+                    {
+                        name: 'font-family',
+                        link: 'el-ff.html'
+                    },
+                    {
+                        name: 'font-size',
+                        link: 'el-fs.html'
+                    },
+                    {
+                        name: 'Layout',
+                        link: 'el-layout.html'
+                    },
+                    {
+                        name: 'Button',
+                        link: 'el-button.html'
+                    },
+                    {
+                        name: 'Card',
+                        link: 'el-card.html'
+                    },
+                    {
+                        name: 'Input',
+                        link: 'el-input.html'
+                    },
+                    {
+                        name: 'Table',
+                        link: 'el-table.html'
+                    },
+                    {
+                        name: 'Wrap System',
+                        link: 'el-wrap.html'
+                    },
+                    {
+                        name: 'width System',
+                        link: 'el-width.html'
+                    },
+                    {
+                        name: 'Grid',
+                        link: 'el-grid.html'
+                    },
+                ]
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+/* Products List ============================================================== */ 
+.prol
+    +flex($fw: wrap)
+    margin-top: 10px
+    +mg(x, -15px)
+    margin-bottom: 30px
+    &_item
+        +fl-item(calc(100%/3), 0)
+        +pd(x, 15px)
+        margin-bottom: 20px
+    +rwdw-max(md)
+        &_item
+            +fl-item(50%)
+    +rwdw-max(sm)
+        &_item
+            +fl-item(100%)

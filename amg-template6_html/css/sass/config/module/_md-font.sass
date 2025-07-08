@@ -1,0 +1,26 @@
+@charset "utf-8"
+
+%icon
+    position: absolute
+
+@function content($fa-var)
+    // @return unquote("'#{ $fa-var }'") // 這個也可以
+    @return unquote("\"#{ $fa-var }\"")
+
+$icons: (skull: \e18c,
+warning: \e243,
+checkmark: \e258,
+instagram: \e32e,
+twitter: \e32f,
+dribbble: \e341,
+github: \e34c,
+soundcloud: \e35d,
+stackoverflow: \e367)
+
+// [data-icon]::before 
+//     @extend %icon
+//     content: attr(data-icon)
+
+@each $name, $glyph in $icons
+    [data-icon="#{$name}"]::before 
+        content: fa-content($glyph)

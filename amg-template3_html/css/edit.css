@@ -1,0 +1,69 @@
+/*----------------------------------------
+Jhuang Ping Editor (c) & Management Update
+v1.2 | 2019.03.15
+----------------------------------------*/
+/* Edit Style ====================================================================*/
+.datatable { max-width: 875px; min-width: 500px; width: 100%; }
+.datatable td, .datatable th { padding: 6px 15px; }
+.datatable th { font-weight: normal; }
+.datatable tr { background: #dedede; }
+.datatable tr:first-child th { color: #fff; background: #506a85; text-align: center; }
+.datatable tr:nth-of-type(even) { background: #ebebeb; }
+
+.edit-box { font-size: 1.5rem; padding-bottom: 20px; line-height: 28px; color: #5C646F; word-wrap: break-word; }
+.edit-box ul, .edit-box ol { margin: 1.12em 0; }
+.edit-box ol ul, .edit-box ul ol, .edit-box ul ul, .edit-box ol ol { margin-top: 0; margin-bottom: 0; }
+.edit-box li { display: list-item; list-style-type: inherit; }
+.edit-box ul { list-style-type: disc; }
+.edit-box ol { list-style-type: decimal; }
+.edit-box ol.n, .edit-box ul.n { list-style: none; }
+.edit-box ol.c, .edit-box ul.c { list-style: circle; }
+.edit-box ol.s, .edit-box ul.s { list-style: square; }
+.edit-box ol.dlz, .edit-box ul.dlz { list-style: decimal-leading-zero; }
+.edit-box ol.lr, .edit-box ul.lr { list-style: lower-roman; }
+.edit-box ol.ur, .edit-box ul.ur { list-style: upper-roman; }
+.edit-box ol.la, .edit-box ul.la { list-style: lower-alpha; }
+.edit-box ol.ua, .edit-box ul.ua { list-style: upper-alpha; }
+.edit-box ol.lg, .edit-box ul.lg { list-style: lower-greek; }
+.edit-box ol.amn, .edit-box ul.amn { list-style: armenian; }
+.edit-box ol.grg, .edit-box ul.grg { list-style: georgian; }
+.edit-box ul, .edit-box ol { display: block; page-break-before: avoid; padding-left: 20px; }
+.edit-box h1 { font-size: 2em; margin: 0.67em 0; }
+.edit-box h2 { font-size: 1.5em; margin: 0.75em 0; }
+.edit-box h3 { font-size: 1.17em; margin: 0.83em 0; }
+.edit-box h4, .edit-box p, .edit-box blockquote, .edit-box fieldset, .edit-box form, .edit-box dl, .edit-box dir, .edit-box menu { margin: 1.12em 0; }
+.edit-box h5 { font-size: .83em; margin: 1.5em 0; }
+.edit-box h6 { font-size: .75em; margin: 1.67em 0; }
+.edit-box h1, .edit-box h2, .edit-box h3, .edit-box h4, .edit-box h5, .edit-box h6, .edit-box b, .edit-box strong { font-weight: bolder; }
+.edit-box .sub { vertical-align: sub; }
+.edit-box .sup { vertical-align: super; }
+.edit-box .red { color: #E06666; }
+.edit-box .title { font-size: 1.8rem; font-weight: normal; display: block; text-align: left; color: #062033; margin: 10px 0; }
+.edit-box a { color: #1EA78D; }
+.edit-box a:hover { opacity: .5; }
+.edit-box .gray { color: #949494; }
+.edit-box .grid, .edit-box .gd { display: flex; flex-wrap: wrap; margin: 0 -15px; }
+.edit-box [class^="gd-"] { padding: 10px 15px; }
+.edit-box [class^="gd-"].gdp, .edit-box [class^="gd-"].gd { display: flex; flex-wrap: wrap; padding: 10px 15px; }
+.edit-box .gd-1 { width: 8.33333%; }
+.edit-box .gd-2 { width: 16.66667%; }
+.edit-box .gd-3 { width: 25%; }
+.edit-box .gd-4 { width: 33.33333%; }
+.edit-box .gd-5 { width: 41.66667%; }
+.edit-box .gd-6 { width: 50%; }
+.edit-box .gd-7 { width: 58.33333%; }
+.edit-box .gd-8 { width: 66.66667%; }
+.edit-box .gd-9 { width: 75%; }
+.edit-box .gd-10 { width: 83.33333%; }
+.edit-box .gd-11 { width: 91.66667%; }
+.edit-box .gd-12 { width: 100%; }
+.edit-box .center { justify-content: center; align-items: center; }
+.edit-box .left { justify-content: flex-start; }
+.edit-box .right { justify-content: flex-end; }
+.edit-box .on { align-items: flex-start; }
+.edit-box .under { align-items: flex-end; }
+@media all and (max-width: 980px) { .edit-box .grid, .edit-box .gd { margin: 0 -5%; }
+  .edit-box [class^="gd-"] { width: 100% !important; padding: 10px 5%; } }
+.edit-box .row { display: flex; flex-wrap: wrap; }
+.edit-box .ed-pic { max-width: 288px; width: 100%; }
+.edit-box .ed-text { width: calc(100% - 288px); padding-left: 20px; }

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+    <head>
+        <!-- Title and Meta 
+        =============================================================================== -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Demo</title>
+        <meta name="author" content="" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0" />
+        <meta name="format-detection" content="telephone=no">
+
+        <!-- ico 
+        =============================================================================== -->
+        <link rel="icon" type="image/x-icon" href="img/common/web-icon.ico" />
+
+        <!-- fontawesome Icon || IcoMoon Icon
+        =============================================================================== -->
+        <!-- <link rel="stylesheet" href="css/fontawesome/css/all.min.css"> -->
+        <link rel="stylesheet" href="css/icon.css">
+
+        <!-- Google Fonts 
+        =============================================================================== -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="js/plugin/aos/aos.css">
+        <link rel="stylesheet" href="js/plugin/swiper/swiper.min.css">
+        <link rel="stylesheet" href="js/plugin/fancybox/jquery.fancybox.min.css">
+        <link rel="stylesheet" href="js/plugin/tab/easy-responsive-tabs.css">
+
+        <!-- Web Style
+        =============================================================================== -->
+        <link rel="stylesheet" type="text/css" href="css/module.css">
+        <link rel="stylesheet" type="text/css" href="css/plugin.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/edit.css">
+    </head>
+<body data-id="index">
+    <h1 class="u-t-hide"></h1>
+    <div class="l-wp-html">
+        
+        <header class="hd" data-aos="fade-down">
+            <div class="hd_wp l-wp-1366">
+
+                <a href="index.html" class="hd_logo">
+                    <img src="img/common/logo.svg" alt="">
+                </a>
+
+                <div class="hd_toggle">
+                    <span class="hd_toggle-bar"></span>
+                    <span class="hd_toggle-bar"></span>
+                    <span class="hd_toggle-bar"></span>
+                </div>
+                <div class="hd_nav">
+                    <div class="hd_nav_main">
+                        <nav class="menu">
+                            <ul class="menu_list">
+                                <li class="menu_item" data-active="index"><a href="index.html" class="menu_link">首頁</a></li>
+                                <li class="menu_item" data-active="about">
+                                    <a href="products.html" class="menu_link">商品分類</a>
+                                    <div class="dropdown">
+                                        <a href="products.html" class="dropdown_link">內衣系列</a>
+                                        <a href="products.html" class="dropdown_link">童裝系列</a>
+                                        <a href="products.html" class="dropdown_link">保養品系列</a>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="hd_nav_sub">
+                        <div class="submenu">
+                            <div class="submenu_list lang u-hide">
+                                <div class="submenu_btn lang_toggle">
+                                    <span class="lang_name">EN</span>
+                                </div>
+                                <div class="lang_ctr">
+                                    <a href="" class="lang_link">TW</a>
+                                    <a href="" class="lang_link">EN</a>
+                                </div>
+                            </div>
+                            <div class="submenu_list">
+                                <div class="m-btn js-search-open">
+                                    <i class="icon-loupe"></i>
+                                </div>
+                            </div>
+                            <div class="submenu_list">
+                                <a href="" target="_blank" rel="noopener noreferrer" class="submenu_link"><i class="icon-shopping-bag"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+
+        <form action="search.html" class="hd-search"><!-- form 僅示意用 可更換成DIV標籤 -->
+            <div class="hd-search_ctr">
+                <div class="hd-search_tool">
+                    <div class="m-btn m-btn--">
+                        <div class="m-btn_name"><i class="icon-x"></i></div>
+                    </div>
+                </div>
+                <div class="hd-search_input">
+                    <input type="text">
+                    <button class="m-btn m-btn--search">
+                        <span class="m-btn_name"><i class="icon-loupe"></i></span>
+                    </button>
+                </div>
+            </div>
+            <div class="hd-search_mask js-search-close"></div>
+        </form>
+
+        <div class="l-wp-main">
+            <div class="m-bn m-bn--index">
+                <div class="m-bn_wp">
+                    <div class="m-bn_ctr">
+                        <div class="m-bn_swp swiper-container" data-aos="zoom-out" data-aos-duration="3000">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="m-bn_img">
+                                        <!-- for pc -->
+                                        <div class="m-bn_img_el u-show-sm-pc" data-imgfix="out">
+                                            <img src="img/f2c/index/bn01_1920x800.jpg" alt="">
+                                        </div>
+                                        <!-- for mobile -->
+                                        <div class="m-bn_img_el u-show-sm-mobile" data-imgfix="out">
+                                            <img src="img/f2c/index/bn01_575x800.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="m-bn_img">
+                                        <!-- for pc -->
+                                        <div class="m-bn_img_el u-show-sm-pc" data-imgfix="out">
+                                            <img src="img/f2c/index/bn02_1920x800.jpg" alt="">
+                                        </div>
+                                        <!-- for mobile -->
+                                        <div class="m-bn_img_el u-show-sm-mobile" data-imgfix="out">
+                                            <img src="img/f2c/index/bn02_575x800.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m-bn_pagination swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="idx-rpro" data-aos="fade-up">
+                <div class="idx-rpro_wp l-wp-1366">
+                    <div class="idx-rpro_head">
+                        <div class="idx-rpro_title">熱銷商品</div>
+                        <div class="idx-rpro_more u-show-sm-pc">
+                            <a href="" class="m-btn m-btn--rectangle-gray">
+                                <span class="m-btn_name">More</span>
+                            </a>
+                        </div>
+                        <div class="idx-rpro_btn u-show-sm-pc">
+                            <div class="m-btn m-btn--arrw js-btn-prev">
+                                <div class="m-btn_icon icon-chevron-left"></div>
+                            </div>
+                            <div class="m-btn m-btn--arrw js-btn-next">
+                                <div class="m-btn_icon icon-chevron-right"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="idx-rpro_body">
+                        <div class="idx-rpro_swp swiper-container">
+                            <div class="swiper-wrapper">
+
+                                <div class="swiper-slide">
+                                    <div class="m-crd m-crd--idx-rpro">
+                                        <div class="m-crd_pic" data-imgfix="in">
+                                            <img src="img/f2c/index/rpro-pic01_330x385.png" alt="">
+                                        </div>
+                                        <div class="m-crd_info">
+                                            <div class="m-crd_name">休閒襯衫</div>
+                                            <div class="m-crd_price">$150</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="m-crd m-crd--idx-rpro">
+                                        <div class="m-crd_pic" data-imgfix="in">
+                                            <img src="img/f2c/index/rpro-pic02_330x385.png" alt="">
+                                        </div>
+                                        <div class="m-crd_info">
+                                            <div class="m-crd_name">小洋裝</div>
+                                            <div class="m-crd_price">$350</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="m-crd m-crd--idx-rpro">
+                                        <div class="m-crd_pic" data-imgfix="in">
+                                            <img src="img/f2c/index/rpro-pic03_330x385.png" alt="">
+                                        </div>
+                                        <div class="m-crd_info">
+                                            <div class="m-crd_name">全罩式耳機</div>
+                                            <div class="m-crd_price">$2500</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="m-crd m-crd--idx-rpro">
+                                        <div class="m-crd_pic" data-imgfix="in">
+                                            <img src="./img/f2c/index/rpro-pic04_330x385.png" alt="">
+                                        </div>
+                                        <div class="m-crd_info">
+                                            <div class="m-crd_name">機能外套</div>
+                                            <div class="m-crd_price">$350</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="idx-rpro_btn u-show-sm-mobile">
+                            <div class="m-btn m-btn--arrw js-btn-prev">
+                                <div class="m-btn_icon icon-chevron-left"></div>
+                            </div>
+                            <div class="m-btn m-btn--arrw js-btn-next">
+                                <div class="m-btn_icon icon-chevron-right"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="idx-rpro_more u-show-sm-mobile">
+                        <a href="" class="m-btn m-btn--rectangle-gray">
+                            <span class="m-btn_name">More</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="idx-class" data-aos="fade-up">
+                <div class="idx-class_wp l-wp-1366">
+
+                    <div class="idx-class_swp swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="m-crd m-crd--idx-cls">
+                                    <div class="m-crd_pic" data-imgfix="out">
+                                        <img src="img/f2c/index/cls-pic01_435x530.jpg" alt="">
+                                    </div>
+                                    <div class="m-crd_ctr">
+                                        <div class="m-crd_title">內衣系列</div>
+                                        <div class="m-crd_btn">
+                                            <a href="" class="m-btn m-btn--more1">
+                                                <span class="m-btn_icon"></span>
+                                                <span class="m-btn_name">COMEING SOON</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="m-crd m-crd--idx-cls">
+                                    <div class="m-crd_pic" data-imgfix="out">
+                                        <img src="img/f2c/index/cls-pic02_435x530.jpg" alt="">
+                                    </div>
+                                    <div class="m-crd_ctr">
+                                        <div class="m-crd_title">童裝系列</div>
+                                        <div class="m-crd_btn">
+                                            <a href="" class="m-btn m-btn--more1">
+                                                <span class="m-btn_icon"></span>
+                                                <span class="m-btn_name">COMEING SOON</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="m-crd m-crd--idx-cls">
+                                    <div class="m-crd_pic" data-imgfix="out">
+                                        <img src="img/f2c/index/cls-pic03_435x530.jpg" alt="">
+                                    </div>
+                                    <div class="m-crd_ctr">
+                                        <div class="m-crd_title">保養品系列</div>
+                                        <div class="m-crd_btn">
+                                            <a href="" class="m-btn m-btn--more1">
+                                                <span class="m-btn_icon"></span>
+                                                <span class="m-btn_name">COMEING SOON</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="idx-class_btn">
+                        <div class="m-btn m-btn--arrw js-btn-prev">
+                            <div class="m-btn_icon icon-chevron-left"></div>
+                        </div>
+                        <div class="m-btn m-btn--arrw js-btn-next">
+                            <div class="m-btn_icon icon-chevron-right"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="idx-shopping">
+                <div class="idx-shopping_ctr">
+                    <div class="idx-shopping_title">前往賣場</div>
+                    <div class="idx-shopping_btn">
+                        <a href="" target="_blank" rel="noopener noreferrer" class="m-btn m-btn--rectangle-white">
+                            <span class="m-btn_name">購物去</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="idx-shopping_bg" data-bg="img/index/shopping-bg.jpg"></div>
+            </div>
+
+            <div class="idx-cate u-hide" data-aos="fade-up">
+                <div class="idx-cate_wp l-wp-1366">
+                    <div class="idx-cate_title">Demo 商品分類</div>
+                    <div class="idx-cate_swp swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="m-crd m-crd--idx-cate">
+                                    <div class="m-crd_pic" data-imgfix="in">
+                                        <img src="img/f2c/index/cte-pic01_120x120.png" alt="">
+                                    </div>
+                                    <div class="m-crd_name">T卹</div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="m-crd m-crd--idx-cate">
+                                    <div class="m-crd_pic" data-imgfix="in">
+                                        <img src="img/f2c/index/cte-pic02_120x120.png" alt="">
+                                    </div>
+                                    <div class="m-crd_name">氣墊船襪</div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="m-crd m-crd--idx-cate">
+                                    <div class="m-crd_pic" data-imgfix="in">
+                                        <img src="img/f2c/index/cte-pic03_120x120.png" alt="">
+                                    </div>
+                                    <div class="m-crd_name">夾克</div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="m-crd m-crd--idx-cate">
+                                    <div class="m-crd_pic" data-imgfix="in">
+                                        <img src="img/f2c/index/cte-pic04_120x120.png" alt="">
+                                    </div>
+                                    <div class="m-crd_name">連身裙</div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="m-crd m-crd--idx-cate">
+                                    <div class="m-crd_pic" data-imgfix="in">
+                                        <img src="img/f2c/index/cte-pic05_120x120.png" alt="">
+                                    </div>
+                                    <div class="m-crd_name">牛仔褲</div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="m-crd m-crd--idx-cate">
+                                    <div class="m-crd_pic" data-imgfix="in">
+                                        <img src="img/f2c/index/cte-pic06_120x120.png" alt="">
+                                    </div>
+                                    <div class="m-crd_name">手錶</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="idx-cate_btn">
+                            <div class="m-btn m-btn--arrw js-btn-prev">
+                                <div class="m-btn_icon icon-chevron-left"></div>
+                            </div>
+                            <div class="m-btn m-btn--arrw js-btn-next">
+                                <div class="m-btn_icon icon-chevron-right"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="ft"> 
+            <div class="ft_wp l-wp-1200">
+                <div class="ft_wp-info">
+                    <div class="ft-list">
+                        <div class="ft-list_head">聯絡資訊</div>
+                        <div class="ft-list_body">
+                            <ul class="ft-list_ul ft-list_ul--data">
+                                <li class="ft-list_li"><i class="icon-phone"></i><a href="tel:+88604000000">04-000000</a></li>
+                                <li class="ft-list_li"><i class="icon-mail"></i><a href="mailto:info@mail.com">info@mail.com</a></li>
+                                <li class="ft-list_li"><i class="icon-map-pin"></i><a href="javascript:void(0)" rel="noopener noreferrer">Demo Rd., Demo., Demo 4000614 , Taiwan (R.O.C.)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ft-list u-show-pc">
+                        <div class="ft-list_head">Demo</div>
+                        <div class="ft-list_body">
+                            <ul class="ft-list_ul">
+                                <li class="ft-list_li"><a href="about.html" class="ft-list_link">Demo</a></li>
+                                <li class="ft-list_li"><a href="javascript:void(0)" rel="noopener noreferrer" class="ft-list_link">前往賣場</a></li>
+                                <li class="ft-list_li"><a href="news.html" class="ft-list_link">最新消息</a></li>
+                                <!-- <li class="ft-list_li"><a href="" class="ft-list_link">品牌日誌</a></li> -->
+                                <div class="ft-list_li"><a href="contact.html" class="ft-list_link">聯絡我們</a></div>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ft-list">
+                        <div class="ft-list_head">社群</div>
+                        <div class="ft-list_body">
+                            <ul class="ft-list_ul ft-list_ul--community">
+                                <li class="ft-list_li"><a href="" target="_blank" rel="noopener noreferrer" class="icon-facebook"></a></li>
+                                <li class="ft-list_li"><a href="" target="_blank" rel="noopener noreferrer" class="icon-line"></a></li>
+                                <!-- <li class="ft-list_li"><a href="" target="_blank" rel="noopener noreferrer" class="icon-twitter"></a></li> -->
+                                <li class="ft-list_li"><a href="" target="_blank" rel="noopener noreferrer" class="icon-instagram"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ft_wp l-wp-1366">
+                <div class="ft_wp-copyright">
+                    <div class="ft-copyright">
+                        <div class="ft-copyright_text">
+                            copyright © Demo all right reserved.
+                        </div>
+                        <ul class="ft-copyright_ul">
+                            <li class="ft-copyright_li"><a href="" class="ft-copyright_link">網站使用款</a></li>
+                            <li class="ft-copyright_li"><a href="" class="ft-copyright_link">隱私權政策</a></li>
+                            <li class="ft-copyright_li"><a href="" class="ft-copyright_link">免責聲明</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ft_gotop">
+                <div class="m-btn m-btn--gotop">
+                    <div class="m-btn_icon"></div>
+                    <div class="m-btn_name">TOP</div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <script src="js/plugin/jquery/jquery-3.3.1.min.js"></script>
+    <script src="js/plugin/aos/aos.js"></script>
+    <script src="js/plugin/fancybox/jquery.fancybox.min.js"></script>
+    <script src="js/plugin/swiper/swiper.min.js"></script>
+    <script src="js/tool.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>

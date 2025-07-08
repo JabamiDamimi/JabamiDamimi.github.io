@@ -1,0 +1,40 @@
+@charset "utf-8"
+
+@mixin md-typography() 
+    a
+        cursor: pointer
+        
+        +rwdw-min()
+            &[href^="tel:"]
+                pointer-events: none
+            &:hover
+                color: cr(hover)
+                // opacity: .5
+
+    p:not(:last-child)
+        margin-bottom: 1em
+
+    h1, h2, h3, h4, h5, h6
+        display: inline-block
+
+    @content
+
+@mixin md-icon()
+    /* icon ----------------------------------------------------------------------- */
+    [data-icon]
+        font-style: normal
+        &::before
+            font-family: $iconGlyph
+            color: $dna
+
+    @each $name, $glyph in $icons
+        [data-icon="#{$name}"]::before 
+            content: content($glyph)
+
+@mixin md-edit()
+    /* eidt ----------------------------------------------------------------------- */
+    .m-edit
+        +noRest()
+        // +bs-grid()
+        
+        @content

@@ -1,0 +1,88 @@
+// Font px
+@function px($val)
+	@if $val == auto
+		@return auto
+	@else
+		@return $val + px
+
+// Font Size px to rem
+@function rem($val, $fz: map-get($default, htmlFz) )
+	$unit: $fz
+	@if $fz == null
+		$unit: 16
+	
+	@if $val == auto
+		@return auto
+	@else
+		@return ( $val / $unit ) + rem
+
+// Font Size px to em
+@function em($val,$fz: map-get($default, bodyFz) )
+	$unit: $fz
+	@if $fz == null
+		$unit: 16
+
+	@if $val == auto
+		@return auto
+	@else
+		@return ($val / $unit) + em
+
+// Font line-height
+@function lh($lh: map-get($default, bodyLh), $px: map-get($default, bodyFz))
+	@return ($lh / $px)
+
+// Color map-get 
+@function cr($n,$c: $color)
+	@return map-get($c, $n)
+
+// Background map-get
+@function bgc($n, $c: $backgroundColor)
+	@return map-get($c, $n)
+
+// vw 換算
+@function vw($val,$win: 1920)
+	@if $val == auto
+		@return auto
+	@else
+		@return ($val / ($win / 100)) + vw
+
+// vh 換算
+@function vh($val,$win: 1080)
+	@if $val == auto
+		@return auto
+	@else
+		@return ($val / ($win / 100)) + vh
+
+// percentage 簡寫
+@function pa($val, $win: 1920)
+	@if $val == auto
+		@return auto
+	@else
+		@return percentage($val / $win)
+
+// font
+@function font($fontVal)
+	@return map-get($font, $fontVal), Arial, 'Microsoft JhengHei', sans-serif
+
+// Unit Judge (for Padding & Margin)
+@function unit($val, $unit: rem)
+	@if $val == auto
+		@return auto
+	@else if $val == clear
+		@return inherit
+	@else 		
+		@if $unit == rem
+			@return rem($val)
+		@else if $unit == em
+			@return em($val)
+		@else if $unit == vw
+			@return vw($val)
+		@else if $unit == vh
+			@return vh($val)
+		@else
+			@return px($val)
+
+// Content
+@function content($fa-var)
+	@return unquote("\"#{ $fa-var }\"")
+	// @return unquote("'#{ $fa-var }'") // 這個也可以

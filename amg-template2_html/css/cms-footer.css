@@ -1,0 +1,59 @@
+@charset "UTF-8";
+/*----------------------------------------
+Jhuang Ping Editor (c) & Management Update
+v1.2 | 2019.03.15
+----------------------------------------*/
+.gotopBox { display: none; }
+
+.pagetopbtn { z-index: 9; display: flex; flex-direction: column; justify-content: center; align-items: center; width: 40px; height: 40px; padding: 4px; border-radius: 2px; background: #3c5065; transition: all .3s; cursor: pointer; box-sizing: initial; }
+.pagetopbtn:before { line-height: 1; content: '\e801'; font-family: 'fontello'; color: #AEAEAE; padding-bottom: 4px; font-size: 2rem; }
+.pagetopbtn:hover { opacity: .5; }
+
+footer { background: #2f4052; color: #fff; position: relative; }
+footer a.more { color: #a3b1bf; padding: 30px 0; display: inline-block; vertical-align: top; }
+footer a.more::after { font-family: FontAwesome; content: '\f061'; font-size: 1.2rem; margin-left: 11px; }
+footer a:hover { opacity: .5; }
+footer .wrap { max-width: 1148px; }
+footer h3 { font-weight: 100; margin: 1.17em 0; }
+footer .top { margin-bottom: 88px; }
+footer .top .wrap { display: grid; grid-template-columns: repeat(auto-fit, minmax(258px, 1fr)); grid-gap: 132px; }
+footer .top .center ul { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); grid-gap: 12px; }
+footer .top .right .contact-icon { margin-top: 30px; }
+footer .top .right .icon { display: inline-block; margin-right: 8px; vertical-align: top; background: url("../images/footer_contact_icon.png") no-repeat; width: 35px; height: 35px; }
+footer .top .right .googleplus { background-position: 0 0; }
+footer .top .right .line { background-position: -45px 0; }
+footer .top .right .linkedin { background-position: -90px 0; }
+footer .bottom { background: #283645; font-size: .866rem; color: #707e8c; padding: 27px 0 32px; }
+footer .bottom .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; }
+footer .link { font-size: 1.35rem; display: flex; flex-wrap: wrap; list-style-type: none; margin: 0; padding: 0; }
+footer .link a { color: #707e8c; padding: 0 12px; }
+footer .link li:not(:last-child)::after { content: '‧'; color: #707e8c; }
+@media all and (max-width: 1024px) { footer .top .wrap { grid-gap: 0; } }
+
+.footer-logo { font-size: 2.8rem; line-height: 28px; margin-bottom: 20px; display: inline-block; cursor: pointer; }
+
+.footer-information { font-size: 1.4rem; }
+.footer-information a { color: #fff; }
+
+[class^="ft-information-"] { position: relative; padding: 8px 0 8px 23px; }
+[class^="ft-information-"]:before { font-size: 1.6rem; font-family: 'FontAwesome'; content: ''; position: absolute; left: 0px; opacity: .5; }
+
+.ft-information-tel a { pointer-events: none; }
+
+.ft-information-add:before { content: '\f3c5'; }
+
+.ft-information-tel:before { content: '\f095'; }
+
+.ft-information-fax:before { content: '\f1ac'; }
+
+.ft-information-mail:before { content: '\f0e0'; }
+
+.ft-message-name { display: block; font-size: 1.8rem; margin-bottom: 20px; }
+
+.ft-messages-list { font-size: 1.5rem; }
+.ft-messages-list li { padding: 5px 0; }
+.ft-messages-list li:before { font-family: "Font Awesome 5 Solid"; content: '\f0da'; padding-right: 8px; opacity: .5; }
+.ft-messages-list a { color: #fff; }
+@media all and (max-width: 992px) { .ft-messages-list { display: flex; flex-wrap: wrap; max-width: 355px; margin: 0 auto; }
+  .ft-messages-list li { width: calc(100%/3); text-align: left; } }
+@media all and (max-width: 320px) { .ft-messages-list li { width: 50%; } }

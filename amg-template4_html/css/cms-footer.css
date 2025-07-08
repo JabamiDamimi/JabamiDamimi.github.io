@@ -1,0 +1,26 @@
+/*----------------------------------------
+Jhuang Ping Editor (c) & Management Update
+v1.2 | 2019.03.15
+----------------------------------------*/
+.gotopBox { display: none; }
+
+.pagetopbtn { z-index: 9; display: flex; flex-direction: column; justify-content: center; align-items: center; width: 30px; height: 30px; border-radius: 0px; color: #fff; background: #000; opacity: .5; filter: alpha(opacity=50); transition: all .3s; cursor: pointer; box-sizing: initial; position: fixed; top: auto; right: 0px; bottom: 20px; }
+.pagetopbtn:before { line-height: 1; content: '\f077'; font-family: "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands"; padding-bottom: 4px; font-size: 1.6rem; }
+.pagetopbtn:hover { opacity: .5; }
+
+footer { background: #af3030; padding: 30px 0; }
+
+.footer-content { display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between; padding: 0 25px; }
+.footer-content > div:first-child { font-size: 15px; color: #fff; line-height: 160%; display: flex; flex-direction: row; flex-wrap: wrap; }
+.footer-content > div:first-child a { color: #fff; }
+.footer-content > div:first-child a:hover { text-decoration: underline; }
+.footer-content > div:first-child > div:first-child { padding-right: 15px; }
+.footer-content > div:last-child { text-align: right; font-size: 15px; color: #fff; line-height: 160%; padding-top: 10px; }
+.footer-content > div:last-child a { color: #fff; text-decoration: underline; }
+.footer-content > div:last-child a:hover { color: #fff; text-decoration: none; }
+@media all and (max-width: 992px) { .footer-content { flex-direction: column; justify-content: flex-start; padding: 0 10px; }
+  .footer-content > div:first-child { flex-direction: column; }
+  .footer-content > div:first-child > div:first-child { padding-bottom: 10px; }
+  .footer-content > div:last-child { text-align: left; } }
+
+.copyright { font-size: 13px; color: rgba(255, 255, 255, 0.5); line-height: 20px; padding-top: 12px; }

@@ -1,0 +1,105 @@
+/*----------------------------------------
+Jhuang Ping Editor (c) & Management Update
+v1.2 | 2019.03.15
+----------------------------------------*/
+/* Basic ======================================================================*/
+.common-title { font-size: 3.6rem; color: #506a85; margin-bottom: 60px; line-height: 1; text-align: center; }
+
+.subtitle { color: #282828; text-align: center; font-size: 2.2rem; margin-bottom: 25px; }
+
+/* Banner =====================================================================*/
+.banner { background: #000; overflow: hidden; }
+.banner .wrap { max-width: 1345px; position: relative; }
+
+.owl-idxbanner.owl-theme:before, .owl-idxbanner.owl-theme:after { position: absolute; top: 0px; z-index: 3; content: ''; width: 150px; height: 100%; }
+.owl-idxbanner.owl-theme:before { background: -moz-linear-gradient(left, black 0%, transparent 100%); /* FF3.6-15 */ background: -webkit-linear-gradient(left, black 0%, transparent 100%); /* Chrome10-25,Safari5.1-6 */ background: linear-gradient(to right, black 0%, transparent 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */ }
+.owl-idxbanner.owl-theme:after { right: 0px; background: -moz-linear-gradient(left, transparent 0%, black 100%); /* FF3.6-15 */ background: -webkit-linear-gradient(left, transparent 0%, black 100%); /* Chrome10-25,Safari5.1-6 */ background: linear-gradient(to right, transparent 0%, black 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 */ }
+.owl-idxbanner.owl-theme .owl-dots { z-index: 5; width: 100%; position: absolute; bottom: 0px; }
+.owl-idxbanner.owl-theme .owl-dots .owl-dot { margin: 8px 0; }
+.owl-idxbanner.owl-theme .owl-dots .owl-dot span { background: #fff; }
+.owl-idxbanner.owl-theme .owl-dots .owl-dot:hover span { background: rgba(30, 167, 141, 0.9); }
+.owl-idxbanner.owl-theme .owl-dots .owl-dot.active span { background: #1edf96; }
+
+.slogan { display: flex; justify-content: center; align-items: center; position: absolute; left: 0px; width: 100%; height: 100%; z-index: 99; pointer-events: none; }
+.slogan h1 { color: #fff; font-weight: normal; text-align: center; }
+.slogan [class*="font"] { display: block; padding: 10px 0; }
+.slogan .fontBig { font-size: 6.2rem; line-height: 1; }
+.slogan .fontMin { font-size: 4.8rem; line-height: 1; }
+.slogan .fontSml { font-size: 1.8rem; line-height: 1; }
+.slogan .bothLine { max-width: 583px; display: flex; justify-content: center; align-items: center; }
+@media all and (max-width: 1024px) { .slogan .fontSml { padding: 8px; line-height: 1.4; } }
+@media all and (max-width: 480px) { .slogan h1 { padding-top: 30px; }
+  .slogan .fontBig { font-size: 3rem; }
+  .slogan .fontSml { font-size: 1.2rem; } }
+@media all and (max-width: 375px) { .slogan .fontBig { font-size: 2rem; }
+  .slogan .fontMin { font-size: 1.6rem; } }
+
+/* About ======================================================================*/
+.idx-about { text-align: center; }
+.idx-about .common-title, .idx-about p { max-width: 782px; margin: 0 auto; }
+.idx-about .common-title { line-height: 1.4; }
+.idx-about p { text-align: left; font-size: 1.5rem; }
+.idx-about .wrap { max-width: 1143px; font-size: 1.8rem; padding: 75px 0 50px 0; }
+.idx-about h3 { font-size: 2.6rem; font-weight: 100; color: #506a85; margin: 16px 0; }
+@media all and (min-width: 1025px) { .idx-about .common-title { text-align: left; }
+  .idx-about p { margin-top: 40px; }
+  .idx-about .idx-article { display: flex; justify-content: space-between; margin-bottom: 94px; }
+  .idx-about article { width: 325px; margin: 67px 0 0; }
+  .idx-about article p { font-weight: 100; margin-top: 0px; } }
+@media all and (max-width: 1024px) { .idx-about .common-title { font-size: 1.6rem; font-weight: bold; margin: 32px 0 16px; text-align: left; }
+  .idx-about p { margin-bottom: 32px; } }
+
+/* Products ===================================================================*/
+.idx-products { background: #e2e2e2; padding: 78px 0 88px; }
+.idx-products .owl-theme .owl-dots .owl-dot { margin-top: 63px; }
+.idx-products .owl-theme .owl-dots .owl-dot span { background: #506a85; width: 11px; height: 11px; border-radius: 11px; transition: .3s linear; margin: 0 12px; }
+.idx-products .owl-theme .owl-dots .owl-dot:hover span { background: #008f77; }
+.idx-products .owl-theme .owl-dots .owl-dot.active span { background: #00bc9c; }
+
+.idxpro-article article { background: #fff; }
+.idxpro-article article .text { text-align: center; padding: 14px 0; }
+.idxpro-article article .text h3 { margin: 0; padding: 14px 0; font-weight: 200; color: #506a85; }
+.idxpro-article article .text span { color: #484848; font-size: 1.2rem; }
+.idxpro-article article .text span:after { content: '\f061'; color: #abb8c5; font-size: .6rem; margin-left: 8px; font-family: "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands"; }
+@media all and (min-width: 1025px) { .idxpro-article { display: flex; justify-content: space-between; margin-bottom: 64px; }
+  .idxpro-article article:not(:last-child) { margin-right: 32px; } }
+@media all and (max-width: 1024px) { .idxpro-article article { margin-bottom: 20px; } }
+
+/* News =======================================================================*/
+.idx-news { margin-bottom: 108px; }
+.idx-news .wrap { max-width: 1020px; margin-top: 70px; }
+
+.idx-news-box { display: flex; flex-wrap: wrap; padding-top: 20px; }
+.idx-news-box figure { max-width: 171px; width: 100%; }
+.idx-news-box .content { padding-left: 20px; }
+.idx-news-box span { display: block; }
+.idx-news-box .time { font-size: 1.8rem; color: #ababab; margin-bottom: 10px; }
+.idx-news-box .title { font-size: 1.9rem; color: #282828; text-align: left; margin-bottom: 10px; line-height: 28px; }
+.idx-news-box .text { color: #7c7c7c; font-size: 1.4rem; line-height: 24px; }
+.idx-news-box .list:not(:last-child) { border-bottom: 1px dotted #818181; margin-bottom: 24px; padding-bottom: 24px; }
+@media all and (min-width: 1025px) { .idx-news-box .content { position: relative; margin-right: 44px; padding-right: 44px; }
+  .idx-news-box .content::before { content: ''; position: absolute; right: 2px; top: 50%; transform: translateY(-50%); height: 76%; background: #818181; width: 3px; }
+  .idx-news-box .list { display: grid; grid-template-columns: 171px 1fr 108px; } }
+
+.btn-moreText { display: flex; align-items: center; justify-content: center; height: 108px; width: 108px; border-radius: 108px; color: #fff; background: #506a85; font-size: 1.2rem; }
+
+@media only screen and (max-width: 1440px) { .flexslider-banner .flex-control-nav { right: 1%; } }
+@media only screen and (max-width: 1024px) { .idx-about .wrap, .idx-news .wrap { padding: 0 5%; } }
+@media only screen and (max-width: 992px) { .idx-application-list li { padding: 0 1%; }
+  .idx-news-box { flex-direction: column; }
+  .idx-news-main { width: 100%; margin-bottom: 30px; }
+  .idx-news-submain { width: 100%; }
+  .idx-news-submain .list { padding-left: 0px; } }
+@media only screen and (max-width: 480px) { .slogan h1 { padding-top: 30px; }
+  .slogan .fontBig { font-size: 3rem; line-height: 30px; }
+  .slogan .fontMin { font-size: 2rem; line-height: 20px; }
+  .slogan .fontSml { font-size: 1rem; line-height: 12px; }
+  .idxpro-wrap { width: 100%; }
+  .idxpro-wrap .owl-theme .owl-nav { display: none; }
+  .idx-application-list { flex-wrap: wrap; }
+  .idx-application-list li { width: 44%; padding: 0 3%; margin-bottom: 40px; }
+  .idx-application-list a .pic { margin-bottom: 20px; }
+  .idx-news-main { flex-direction: column; }
+  .idx-news-main figure { margin: 0 auto; }
+  .idx-news-main .content { padding-left: 0px; } }
+@media only screen and (max-width: 375px) { .flexslider-banner .flex-control-nav { display: none; } }

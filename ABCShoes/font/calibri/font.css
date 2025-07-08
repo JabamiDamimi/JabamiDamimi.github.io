@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'calibri';
+  src: url('calibri.ttf');
+  src: url('calibri.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'calibrib';
+  src: url('calibrib.ttf');
+  src: url('calibrib.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'calibrii';
+  src: url('calibrii.ttf');
+  src: url('calibrii.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'calibril';
+  src: url('calibril.ttf');
+  src: url('calibril.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'calibrili';
+  src: url('calibrili.ttf');
+  src: url('calibrili.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'calibriz';
+  src: url('calibriz.ttf');
+  src: url('calibriz.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+

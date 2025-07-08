@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>owlcarousel parameter</title>
+    <style>
+    body {
+        margin: 0px;
+        padding: 0px;
+        line-height: 24px;
+        letter-spacing: 1px;
+        font-family: Arial, 'Microsoft JhengHei', sans-serif;
+        color: #666;
+        font-size: 16px;
+        background: rgba(0, 0, 0, .3);
+    }
+
+    div {
+        box-sizing: border-box;
+    }
+
+    .wrap {
+        width: 80%;
+        margin: 0 auto;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+    }
+
+    .remarks {
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+        display: block;
+        background: #3e3e3e;
+        color: #fff;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+    }
+
+    .remarks h1 {
+        margin: 10px 0;
+    }
+
+    table {
+        width: 100%;
+        margin: 0 auto;
+        background: #e3e3e3;
+        border-spacing: 1px;
+    }
+
+    table td {
+        padding: 5px 8px;
+        background: #fff;
+        transition: all .2s;
+    }
+
+    table tr:nth-child(even) td {
+        background: #ededed;
+    }
+
+    table tr:hover td {
+        background: #272822;
+        color: #91E22E;
+    }
+
+    table thead td {
+        background: #333;
+        color: #91E22E;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="remarks">
+            <h1>Owl Carousel</h1> v2.2.0
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>參數名稱</td>
+                    <td>參數類型</td>
+                    <td>預設值</td>
+                    <td>描述</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>items</td>
+                    <td>Type: Number</td>
+                    <td>Default: 3</td>
+                    <td>在螢幕中可見的旋轉木馬項</td>
+                </tr>
+                <tr>
+                    <td>margin</td>
+                    <td>Type: Number</td>
+                    <td>Default: 0</td>
+                    <td>旋轉木馬項的margin-right值，單位圖元</td>
+                </tr>
+                <tr>
+                    <td>loop</td>
+                    <td>Type: Boolean</td>
+                    <td>Default: false</td>
+                    <td>是否無限迴圈，會複製第一項和最後一項來製作無限迴圈的錯覺</td>
+                </tr>
+                <tr>
+                    <td>center</td>
+                    <td>Type: Boolean</td>
+                    <td>Default: false</td>
+                    <td>旋轉木馬項居中。在奇數和偶數項中都可以很好的工作</td>
+                </tr>
+                <tr>
+                    <td>mouseDrag</td>
+                    <td>Type: Boolean</td>
+                    <td>Default: true</td>
+                    <td>是否可以使用滑鼠拖拽</td>
+                </tr>
+                <tr>
+                    <td>touchDrag</td>
+                    <td>Type: Boolean</td>
+                    <td>Default: true</td>
+                    <td>是否可以觸摸拖拽</td>
+                </tr>
+                <tr>
+                    <td>pullDrag</td>
+                    <td>Type: Boolean</td>
+                    <td>Default: true</td>
+                    <td>Stage pull to edge.</td>
+                </tr>
+                <tr>
+                    <td>freeDrag</td>
+                    <td>Type: Boolean </td>
+                    <td>Default: false</td>
+                    <td>Item pull to edge</td>
+                </tr>
+                <tr>
+                    <td>stagePadding</td>
+                    <td>Type: Number</td>
+                    <td>Default: 0</td>
+                    <td>Stage上的Padding left和Padding right(可以看到相鄰的項)</td>
+                </tr>
+                <tr>
+                    <td>merge</td>
+                    <td>Type: Boolean </td>
+                    <td>Default: false</td>
+                    <td>合併旋轉木馬項。Looking for data-merge='{number}' inside item..</td>
+                </tr>
+                <tr>
+                    <td>mergeFit</td>
+                    <td>Type: Boolean</td>
+                    <td>Default: true</td>
+                    <td>如果螢幕比旋轉木馬項小，使旋轉木馬項適合螢幕大小</td>
+                </tr>
+                <tr>
+                    <td>autoWidth</td>
+                    <td>Type: Boolean </td>
+                    <td>Default: false</td>
+                    <td>設置非網格內容。嘗試在div上使用<code>width</code>樣式</td>
+                </tr>
+                <tr>
+                    <td>startPosition</td>
+                    <td>Type: Number/String</td>
+                    <td>Default: 0</td>
+                    <td>開始點或URL Hash字串，如：'#id'</td>
+                </tr>
+                <tr>
+                    <td>URLhashListener</td>
+                    <td>Type: Boolean</td>
+                    <td>Default: false</td>
+                    <td>監聽url hash 的變化。必須在旋轉木馬項上設置<code>data-hash</code>屬性</td>
+                </tr>
+                <tr>
+                    <td>nav</td>
+                    <td>Type: Boolean</td>
+                    <td>Default: false</td>
+                    <td>顯示ext/prev按鈕</td>
+                </tr>
+                <tr>
+                    <td>navRewind</td>
+                    <td>Type: Boolean</td>
+                    <td>Default: true</td>
+                    <td>跳轉到前一項或後一項</td>
+                </tr>
+                <tr>
+                    <td>navText</td>
+                    <td>Type: Array</td>
+                    <td>Default: ['next','prev']</td>
+                    <td>HTML箭頭導航</td>
+                </tr>
+                <tr>
+                    <td>slideBy</td>
+                    <td>Type: Number/String</td>
+                    <td>Default: 1</td>
+                    <td>Navigation slide by x. 'page' string can be set to slide by page.</td>
+                </tr>
+                <tr>
+                    <td>dots</td>
+                    <td>Type: Boolean</td>
+                    <td>Default: true</td>
+                    <td>顯示圓點導航按鈕</td>
+                </tr>
+                <tr>
+                    <td>dotsEach</td>
+                    <td>Type: Number/Boolean </td>
+                    <td>Default: false</td>
+                    <td>每多少個項顯示一個圓點導航按鈕</td>
+                </tr>
+                <tr>
+                    <td>dotData</td>
+                    <td>Type: Boolean</td>
+                    <td>Default: false</td>
+                    <td>使用<code>data-dot</code>的內容</td>
+                </tr>
+                <tr>
+                    <td>lazyLoad</td>
+                    <td>Type: Boolean</td>
+                    <td>Default: false</td>
+                    <td>是否懶載入圖片。<code>data-src</code>和<code>data-src-retina</code>為高解析度。如果元素不是<code>&lt;img&gt;</code>會設置為元素的內聯背景圖像。</td>
+                </tr>
+                <tr>
+                    <td>lazyContent</td>
+                    <td>Type: Boolean</td>
+                    <td>Default: false</td>
+                    <td>lazyContent選項只在測試版中有，發行版本中已經被刪除。</td>
+                </tr>
+                <tr>
+                    <td>autoplay</td>
+                    <td>Type: Boolean</td>
+                    <td>Default: false</td>
+                    <td>旋轉木馬是否自動播放</td>
+                </tr>
+                <tr>
+                    <td>autoplayTimeout</td>
+                    <td>Type: Number</td>
+                    <td>Default: 5000</td>
+                    <td>旋轉木馬自動播放的時間間隔</td>
+                </tr>
+                <tr>
+                    <td>autoplayHoverPause</td>
+                    <td>Type: Boolean</td>
+                    <td>Default: false</td>
+                    <td>是否在滑鼠滑過時停止自動播放</td>
+                </tr>
+                <tr>
+                    <td>smartSpeed</td>
+                    <td>Type: Number</td>
+                    <td>Default: 250</td>
+                    <td>速度計算</td>
+                </tr>
+                <tr>
+                    <td>fluidSpeed</td>
+                    <td>Type: Boolean</td>
+                    <td>Default: Number</td>
+                    <td>速度計算</td>
+                </tr>
+                <tr>
+                    <td>autoplaySpeed</td>
+                    <td>Type: Number/Boolean</td>
+                    <td>Default: false</td>
+                    <td>是新密碼自動播放的速度</td>
+                </tr>
+                <tr>
+                    <td>navSpeed</td>
+                    <td>Type: Number/Boolean</td>
+                    <td>Default: false</td>
+                    <td>旋轉木馬導航的速度</td>
+                </tr>
+                <tr>
+                    <td>dotsSpeed</td>
+                    <td>Type: Boolean</td>
+                    <td>Default: Number/Boolean</td>
+                    <td>分頁的速度</td>
+                </tr>
+                <tr>
+                    <td>dragEndSpeed</td>
+                    <td>Type: Number/Boolean</td>
+                    <td>Default: false</td>
+                    <td>Drag end speed</td>
+                </tr>
+                <tr>
+                    <td>callbacks</td>
+                    <td>Type: Boolean </td>
+                    <td>Default: true</td>
+                    <td>是否允許回呼函數</td>
+                </tr>
+                <tr>
+                    <td>responsive</td>
+                    <td>Type: Object</td>
+                    <td>Default: empty object</td>
+                    <td>包含responsive選項的物件。設置為flase取消responsive能力。</td>
+                </tr>
+                <tr>
+                    <td>responsiveRefreshRate</td>
+                    <td>Type: Number</td>
+                    <td>Default: 200</td>
+                    <td>Responsive的刷新頻率</td>
+                </tr>
+                <tr>
+                    <td>responsiveBaseElement</td>
+                    <td>Type: DOM element</td>
+                    <td>Default: window</td>
+                    <td>可以設置在任何DOM元素上。如果你關心不支持回應式的流覽器（如IE8），可以在包裹容器中使用該屬性。</td>
+                </tr>
+                <tr>
+                    <td>responsiveClass</td>
+                    <td>Type: Boolean </td>
+                    <td>Default: false</td>
+                    <td>可選的輔助class。添加<code>owl-reponsive-</code>和<code>breakpoint</code> class到主元素上。可以在給定breakpoint的元素上設置內容樣式。</td>
+                </tr>
+                <tr>
+                    <td>video</td>
+                    <td>Type: Boolean</td>
+                    <td>Default: false</td>
+                    <td>是否允許添加YouTube/Vimeo視頻。</td>
+                </tr>
+                <tr>
+                    <td>videoHeight</td>
+                    <td>Type: Number/Boolean</td>
+                    <td>Default: false</td>
+                    <td>設置視頻的高度。</td>
+                </tr>
+                <tr>
+                    <td>videoWidth</td>
+                    <td>Type: Number/Boolean</td>
+                    <td>Default: false</td>
+                    <td>設置視頻的寬度。</td>
+                </tr>
+                <tr>
+                    <td>animateOut</td>
+                    <td>Type: String/Bolean</td>
+                    <td>Default: false</td>
+                    <td>CSS3 animation out.</td>
+                </tr>
+                <tr>
+                    <td>animateIn</td>
+                    <td>Type: String/Bolean </td>
+                    <td>Default: false</td>
+                    <td>CSS3 animation in.</td>
+                </tr>
+                <tr>
+                    <td>fallbackEasing</td>
+                    <td>Type: String </td>
+                    <td>Default: swing</td>
+                    <td>Easing for CSS2 $.animate.</td>
+                </tr>
+                <tr>
+                    <td>info</td>
+                    <td>Type: Function</td>
+                    <td>Default: false</td>
+                    <td>獲取基本資訊的回呼函數(當前的 item/pages/widths) 。Info函數的第二個參數是Owl DOM元素的物件引用。</td>
+                </tr>
+                <tr>
+                    <td>nestedItemSelector</td>
+                    <td>Type: String/Class</td>
+                    <td>Default: false</td>
+                    <td>當owl元素嵌套在某些很深的DOM結構中時使用該參數。在class名字前面不要使用<code>.</code>號。</td>
+                </tr>
+                <tr>
+                    <td>itemElement</td>
+                    <td>Type: String</td>
+                    <td>Default: div</td>
+                    <td>owl-item的DOM元素類型。</td>
+                </tr>
+                <tr>
+                    <td>stageElement</td>
+                    <td>Type: String</td>
+                    <td>Default: div</td>
+                    <td>owl-stage.的DOM元素類型。</td>
+                </tr>
+                <tr>
+                    <td>navContainer</td>
+                    <td>Type: String/Class/ID/Bolean</td>
+                    <td>Default: false</td>
+                    <td>設置自訂的導航容器class</td>
+                </tr>
+                <tr>
+                    <td>dotsContainer</td>
+                    <td>Type: String/Class/ID/Bolean</td>
+                    <td>Default: false</td>
+                    <td>設置自訂的導航容器class</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="remarks">
+            <h1>Jhuang Ping</h1> Organising Materials
+        </div>
+    </div>
+</body>
+
+</html>

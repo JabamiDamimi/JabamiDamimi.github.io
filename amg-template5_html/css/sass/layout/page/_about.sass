@@ -1,0 +1,59 @@
+/* About ====================================================================== */ 
+.abt-stn
+.abt-ctr
+
+.abt-bk-intro
+    +pd(y, rem(100))
+    &_wp
+        +flex($ai: center)
+    &_pic
+        +fl-item(300px, 0)
+        &-logo
+            max-width: 150px
+            +mg(x, auto)
+            margin-bottom: rem(10)
+    &_text
+        +fl-item(calc(100% - 300px), 0)
+        +pd(x, rem(20))
+        &-title
+            display: block
+            font-size: rem(25)
+            font-weight: bold
+            color: cr(gy-333)
+            margin-bottom: rem(10)
+        &-content
+            line-height: lh(16, 26)
+    +rwdw-max(md)
+        &_wp
+            flex-direction: column
+            justify-content: center
+        &_pic
+            margin-bottom: rem(20)
+        &_text
+            +fl-item(100%)
+            &-title
+                text-align: center
+
+.abt-bk-ser
+    +pd(y, rem(50))
+    background: url('../img/about/bg.jpg')no-repeat center
+    background-attachment: fixed
+    &_title
+        text-align: center
+        font-size: rem(25)
+        font-weight: bold
+        color: cr(white)
+        margin-bottom: rem(50)
+    &_list
+        +flex($fw: wrap, $jc: center)
+        +mg(x, rem(-15))
+    &_item
+        +fl-item(calc(100%/3), 0)
+        +pd(x, rem(15))
+        margin-bottom: rem(30)
+    +rwdw-max()
+        &_item
+            +fl-item(50%)
+    +rwdw-max(715)
+        &_item
+            +fl-item(100%)

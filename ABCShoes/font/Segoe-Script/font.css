@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'Segoe-Script';
+  src: url('segoesc.ttf');
+  src: url('segoesc.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Segoe-Script-b';
+  src: url('segoescb.ttf');
+  src: url('segoescb.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+

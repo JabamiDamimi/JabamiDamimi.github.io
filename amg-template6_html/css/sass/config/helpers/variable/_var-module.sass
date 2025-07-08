@@ -1,0 +1,180 @@
+// Module Default <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// Media 
+// Bootstrap Media (px)
+$xl: 1200 !default
+$lg: 992 !default
+$md: 768 !default
+$sm: 575 !default
+
+// Media (px)
+$rwd: 1024 !default //Menu轉換手機尺寸
+$rwd-pc: 1366 !default //電腦尺寸
+$rwd-pcs: $xl !default //小電腦尺寸
+$rwd-pad: $lg !default //平板尺寸
+$rwd-pads: $md !default //小平板尺寸
+$rwd-phone: $sm !default //手機尺寸
+$rwd-phones: 320 !default //小手機尺寸
+
+// Default (md-default)
+// 預設字級 16px
+$default: (htmlFz: 10, bodyFz: 16, bodyLh: 24, bodyCr: #333) !default
+
+// Font Main  預設 ( Arial, 'Microsoft JhengHei', sans-serif )
+$fontDefault: Arial, 'Microsoft JhengHei', sans-serif !default
+$font: (dfk:'DFKai-sb') !default
+
+// Typography Default
+
+// Color
+$color: ( base: map-get($default, bodyCr),
+hover: #007bff,
+black: #000,
+blue: #007bff,
+indigo: #6610f2,
+purple: #6f42c1,
+pink: #e83e8c,
+red: #dc3545,
+orange: #fd7e14,
+yellow: #ffc107,
+green: #28a745,
+teal: #20c997,
+cyan: #17a2b8,
+white: #fff,
+gray: #6c757d,
+gray-dark: #343a40,
+primary: #007bff,
+secondary: #6c757d,
+success: #28a745,
+info: #17a2b8,
+warning: #ffc107,
+danger: #dc3545,
+light: #f8f9fa,
+dark: #343a40) !default
+
+// background color
+$backgroundColor: (hover: #007bff,
+black: #000,
+blue: #007bff,
+indigo: #6610f2,
+purple: #6f42c1,
+pink: #e83e8c,
+red: #dc3545,
+orange: #fd7e14,
+yellow: #ffc107,
+green: #28a745,
+teal: #20c997,
+cyan: #17a2b8,
+white: #fff,
+gray: #6c757d,
+gray-dark: #343a40,
+primary: #007bff,
+secondary: #6c757d,
+success: #28a745,
+info: #17a2b8,
+warning: #ffc107,
+danger: #dc3545,
+light: #f8f9fa,
+dark: #343a40) !default
+
+// Typography (md-typography)
+// Font Awesome Icon
+$fa: 'Font Awesome 5 Solid','Font Awesome 5 Regular','Font Awesome 5 Brands'
+$fas: 'Font Awesome 5 Solid'
+$far: 'Font Awesome 5 Regular'
+$fab: 'Font Awesome 5 Brands' !default
+
+// Icomoon ICON
+$icon: 'icomoon' !default
+
+// Icon Setting
+$iconGlyph: $icon !default
+$icons: (add: \e900,
+arrow-left: \e901,
+arrow-right: \e902,
+arrow-top: \e903,
+catalog: \e904,
+close: \e905,
+delete: \e906,
+download: \e907,
+edit: \e908,
+facebook: \e909,
+hook: \e90a,
+ig: \e90b,
+line: \e90c,
+menu: \e90d,
+play: \e90e,
+search: \e90f) !default
+
+// Module Layout <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// Wrap (l-wp)
+$wpRange: 1024 !default // 基本範圍
+$wpBoth: 15 !default // 左右間距(px)
+$wpCustomName: false !default // [false, true]
+$wpArray: 1680, 1440, 1366, 1140, 1024, 960, 720, 540 !default
+
+// Width (l-w)
+$wCustomName: false !default // [false, true]
+$wArray: 1680, 1440, 1366, 1140, 1024, 960, 720, 540 !default
+
+// Grid (l-gd)
+$gridArray: 2, 3, 4 !default
+
+// Banner (m-bn)
+$bnWidth: 1920 !default
+$bnHeight: 300 !default
+$bnMask: false !default // true, false
+$bnMaskStyle: style01 !default
+
+// Module Utillity <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// Font (u-ff, u-fs, u-fw, u-ta, u-ls, u-lh)
+$FontSwitch: (base: f, sm: t, md: t, lg: t, xl: t) !default
+
+// Font Size (u-fs)
+$fsArray: 12, 14, 16, 18, 20, 25, 30, 35, 40, 45, 50, 55, 60 !default
+
+// Letter Spacing (u-ls) [plus +, negative -, dot .]
+$lsArray: (n1d5: 1.5, n1: -1, 1: 1,1d5: 1.5, 2: 2) !default
+
+// Line Height (u-lh) [plus +, negative -, dot .]
+$lhArray: (0: 0, 1: lh(16, 16)) !default
+
+// Display (u-display)
+$displaySwitch: (sm: t, md: t, lg: t, xl: t) !default
+
+// Flex Layout (u-fl, u-jc, u-ai, u-ac, u-as)
+$flexSwitch: (sm: t, md: t, lg: t, xl: t) !default
+
+// Margin (u-m)
+$mgUnit: vw !default
+
+$mgSwitch: (sm: t, md: t, lg: t, xl: t) !default
+
+$mgDetail: f !default // [ false ]
+$mgArray: 50, 40, 30, 20, 10, auto, clear !default
+
+// $mgDetail: t !default  // [ true ]
+// $mgArray: (all: (50, 40, 30, 20, 10),
+// t: (50, 40, 30, 20, 10),
+// b: (50, 40, 30, 20, 10),
+// l: (50, 40, 30, 20, 10),
+// r: (50, 40, 30, 20, 10),
+// x: (50, 40, 30, 20, 10),
+// y: (50, 40, 30, 20, 10)) !default
+
+
+// Padding (u-p)
+$pdUnit: vw !default
+
+$pdSwitch: (sm: t, md: t, lg: t, xl: t) !default
+
+$pdDetail: f !default
+$pdArray: 50, 40, 30, 20, 10, auto, clear !default
+
+// $pdDetail: t // !default [ true ]
+// $pdArray: (all: (50, 40, 30, 20, 10),
+// t: (50, 40, 30, 20, 10),
+// b: (50, 40, 30, 20, 10),
+// l: (50, 40, 30, 20, 10),
+// r: (50, 40, 30, 20, 10),
+// x: (50, 40, 30, 20, 10),
+// y: (50, 40, 30, 20, 10)) !default

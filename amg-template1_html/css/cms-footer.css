@@ -1,0 +1,44 @@
+footer { background: #1EA78D; border-top: 5px solid #062033; padding: 36px 0 40px 0; color: #fff; position: relative; }
+footer a:hover { opacity: .5; }
+footer .wrap { max-width: 900px; display: flex; flex-wrap: wrap; justify-content: space-between; }
+footer .left, footer .right { width: 100%; }
+footer .left { max-width: 340px; }
+footer .right { max-width: 230px; }
+footer .copyright { width: 100%; text-align: center; font-size: 1.3rem; color: rgba(255, 255, 255, 0.5); border-top: 1px solid rgba(255, 255, 255, 0.5); margin-top: 35px; padding: 40px 0 15px 0; }
+footer .link { width: 100%; display: flex; justify-content: center; }
+footer .link a { font-size: 1.3rem; color: #fff; padding: 0 20px; text-decoration: underline; position: relative; }
+footer .link a:after { position: absolute; top: 20%; right: 0px; content: ''; width: 1px; height: 60%; background: rgba(255, 255, 255, 0.5); }
+footer .link a:last-child { border: none; padding-right: 0px; }
+footer .link a:last-child:after { display: none; }
+@media all and (max-width: 992px) { footer .left, footer .right { width: 90%; max-width: 100%; margin: 0 auto; text-align: center; border-bottom: 1px solid #78BFB1; padding-bottom: 30px; }
+  footer .right { padding-top: 30px; }
+  footer .copyright { padding-top: 0px; border-top: 0px; } }
+
+.footer-logo { font-size: 2.8rem; line-height: 1; margin-bottom: 20px; display: inline-block; cursor: pointer; }
+
+.footer-information { font-size: 1.4rem; }
+.footer-information a { color: #fff; }
+
+[class^="ft-information-"] { position: relative; padding: 8px 0 8px 23px; }
+[class^="ft-information-"]:before { font-size: 1.6rem; font-family: "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands"; content: ''; position: absolute; left: 0px; opacity: .5; }
+@media all and (max-width: 992px) { [class^="ft-information-"]:before { display: none; } }
+
+.ft-information-tel a { pointer-events: none; }
+
+.ft-information-add:before { content: '\f3c5'; }
+
+.ft-information-tel:before { content: '\f095'; }
+
+.ft-information-fax:before { content: '\f1ac'; }
+
+.ft-information-mail:before { content: '\f0e0'; }
+
+.ft-message-name { display: block; font-size: 1.8rem; margin-bottom: 20px; }
+
+.ft-messages-list { font-size: 1.5rem; }
+.ft-messages-list li { padding: 5px 0; }
+.ft-messages-list li:before { font-family: "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands"; content: '\f0da'; padding-right: 8px; opacity: .5; }
+.ft-messages-list a { color: #fff; }
+@media all and (max-width: 992px) { .ft-messages-list { display: flex; flex-wrap: wrap; max-width: 355px; margin: 0 auto; }
+  .ft-messages-list li { width: calc(100%/3); text-align: left; } }
+@media all and (max-width: 320px) { .ft-messages-list li { width: 50%; } }

@@ -1,0 +1,74 @@
+/*----------------------------------------
+Jhuang Ping Editor (c) & Management Update
+v1.2 | 2019.03.15
+----------------------------------------*/
+/* Basic ======================================================================*/
+.title { font-size: 26px; color: #0eb493; margin-bottom: 30px; text-align: center; }
+.title span { color: #373737; }
+
+.subtitle { color: #282828; text-align: center; font-size: 22px; margin-bottom: 25px; }
+
+.content-Box { max-width: 1210px; margin: 0 auto; text-align: left; position: relative; clear: both; }
+
+#content { box-shadow: inset 0px 0px 0px 25px white; padding: 25px; }
+@media all and (max-width: 992px) { #content { padding: 10px; } }
+
+.index-main { display: flex; flex-direction: row; flex-wrap: wrap; }
+.index-main > div { width: 50%; }
+@media all and (max-width: 992px) { .index-main > div { width: 100%; } }
+
+/* Banner =====================================================================*/
+.banner-box { position: relative; background: #fff; }
+
+.banner-slogon { position: absolute; bottom: 105px; text-align: left; left: 42px; color: #fff; font-size: 20px; line-height: 100%; z-index: 101; text-shadow: 0px 0px 15px #000; pointer-events: none; }
+.banner-slogon span { font-size: 46px; display: block; font-weight: 700; padding-bottom: 0px; line-height: 130%; }
+
+.banner { line-height: 0; position: relative; }
+.banner:after { content: ''; background: url("../images/idx-ban-bottom.png") repeat-x; height: 174px; z-index: 99; position: absolute; width: 100%; bottom: 0; left: 0; pointer-events: none; }
+.banner img { width: auto; width: 100%; }
+.banner.owl-theme .owl-dots { margin-top: 0px; display: flex; justify-content: flex-end; z-index: 5; width: 100%; position: absolute; left: 0px; bottom: 28px; padding: 0 33px; }
+.banner.owl-theme .owl-dots .owl-dot { margin: 8px 0; }
+.banner.owl-theme .owl-dots .owl-dot span { width: 15px; height: 15px; background: transparent; border: 2px solid #fff; opacity: 1; margin: 5px; transition: all .3s; }
+.banner.owl-theme .owl-dots .owl-dot:hover span { background: #E94D00; border-color: #E94D00; }
+.banner.owl-theme .owl-dots .owl-dot.active span { background: #E94D00; border-color: #E94D00; }
+
+/* News =======================================================================*/
+.idx-news { display: flex; flex-direction: column; flex-wrap: nowrap; }
+.idx-news > div { position: relative; overflow: hidden; line-height: 0; }
+.idx-news > div:hover img { transform: scale(1.1); }
+.idx-news > div:hover .idx-news-name { background: url(../images/arrow-1.png) no-repeat rgba(233, 77, 0, 0.85) calc(100% - 18px) 18px; color: #fff; }
+.idx-news img { transition: all 0.4s ease-out 0s; width: 100%; }
+
+.idx-news-name { position: absolute; z-index: 2; bottom: 0; right: 0; max-width: 360px; padding: 18px 70px 18px 24px; background: url(../images/arrow-0.png) no-repeat rgba(255, 255, 255, 0.85) calc(100% - 18px) 18px; color: #393939; font-size: 15px; line-height: 120%; transition: all 0.4s ease-out 0s; }
+@media all and (max-width: 570px) { .idx-news-name { position: relative; bottom: auto; right: auto; max-width: 100%; padding: 10px 70px 10px 10px; background: url(../images/arrow-0.png) no-repeat white calc(100% - 18px) 12px; } }
+
+/* Products ===================================================================*/
+.idx-pro { display: flex; flex-direction: row; flex-wrap: wrap; }
+.idx-pro > div { width: 50%; position: relative; line-height: 0; overflow: hidden; background: #000; }
+.idx-pro > div:hover img { opacity: 0.5; transform: scale(1.1); }
+.idx-pro > div:hover .idx-pro-name { color: #e94d00; background: rgba(255, 255, 255, 0.85); }
+.idx-pro img { transition: all 0.4s ease-out 0s; width: 100%; }
+
+.idx-pro-name { position: absolute; z-index: 2; bottom: 0; left: 0; width: 100%; padding: 22px 25px; background: rgba(255, 255, 255, 0.55); color: #3a3a3a; font-size: 17px; line-height: 120%; transition: all 0.4s ease-out 0s; letter-spacing: 1px; font-weight: bold; }
+@media all and (max-width: 570px) { .idx-pro-name { position: relative; bottom: auto; left: auto; padding: 10px; background: #fff; font-weight: normal; letter-spacing: 0; font-size: 15px; } }
+
+/* About ======================================================================*/
+.idx-about { /*background: url(../images/idx-about.jpg) no-repeat bottom center; 
+background-size: cover;*/ padding: 0 45px 0 45px; color: #3d3d3d; font-size: 18px; line-height: 160%; display: flex; flex-direction: row; flex-wrap: nowrap; align-items: center; }
+.idx-about h1 { color: #e94d00; font-size: 46px; line-height: 100%; padding-bottom: 25px; }
+@media all and (max-width: 768px) { .idx-about { padding: 25px 20px; }
+  .idx-about h1 { font-size: 34px; padding-bottom: 15px; } }
+
+.idx-about-btn { margin-top: 40px; display: block; width: 220px; line-height: 42px; border-radius: 21px; background: #282828; color: #ffffff; font-size: 18px; text-align: center; }
+.idx-about-btn:hover { background: #e94d00; }
+
+/* Application ================================================================*/
+.idx-application { display: flex; flex-direction: row; flex-wrap: wrap; }
+.idx-application > div { width: 25%; padding: 22px 20px; background: #eaeaea; display: flex; flex-direction: row; flex-wrap: nowrap; align-items: center; position: relative; }
+.idx-application > div:after { content: ''; position: absolute; width: 1px; height: 100%; background: #fff; top: 0; right: 0; }
+.idx-application > div:last-child:after { display: none; }
+.idx-application > div > div:first-child { width: 40%; }
+.idx-application > div > div:first-child img { width: 100%; }
+.idx-application > div > div:last-child { width: 60%; padding-left: 13px; color: #3a3a3a; font-size: 17px; font-weight: bold; }
+@media all and (max-width: 992px) { .idx-application > div { width: 50%; } }
+@media all and (max-width: 414px) { .idx-application > div { width: 100%; } }

@@ -1,0 +1,12 @@
+// Percentage Height
+@mixin pa-h($h: 9, $w: 16, $patch: null)
+  // 16:9 (youtube: 1280:720) youtube 56.25%  
+
+  // (height / width)
+  padding-bottom: percentage($h / $w)
+  @if $patch != null
+    padding-top: $patch + px
+
+// Table Width Percentage
+@mixin tab-w($td,$tab)
+	width: $td / $tab * 100%

@@ -1,0 +1,41 @@
+/* Contact Us ================================================================= */ 
+.ctu-stn
+.ctu-ctr
+    +flex()
+    padding-bottom: pa(200)
+    &_bk-info, &_bk-fm
+        +fl-item(50%, 0)
+    // &_bk-info
+    //     +flex($ai: center)
+    +rwdw-max(1024)
+        flex-direction: column
+        justify-content: center
+        &_bk-info, &_bk-fm
+            +fl-item(100%)
+        &_bk-info
+            margin-bottom: rem(30)
+
+.ctu-info
+    &_title
+        font-size: rem(25)
+        font-weight: bold
+        color: cr(black)
+        margin-bottom: rem(10)
+    &_ul
+        margin-bottom: rem(20)
+    &_li
+        padding-left: rem(25)
+        position: relative
+        &:not(:last-child)
+            margin-bottom: rem(5)
+        &::before
+            position: absolute
+            top: 0px
+            left: 0px
+            color: cr(gy-333)
+    &_link
+
+.ctu-fm
+    +rwdw-max(md)
+        [class^="col-"]
+            margin-bottom: rem(25)

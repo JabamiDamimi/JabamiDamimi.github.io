@@ -1,0 +1,45 @@
+/* Products Detail ============================================================ */ 
+.prod
+    +flex()
+    margin-top: 20px
+    +mg(x, -15px)
+    margin-bottom: vw(120)
+    > *
+        +fl-item(50%, 0)
+        +pd(x, 15px)
+    +rwdw-max(lg)
+        flex-direction: column
+        +mg(x, 0px)
+        margin-bottom: 120px
+        > *
+            +fl-item(100%)
+            +pd(x, 0px)
+        &_pic
+            margin-bottom: 20px
+
+.prod-swp
+    &_show
+        margin-bottom: 10px
+    &_opt
+
+    &_pic
+        +md-imgfix-h(768, 992)
+
+.prod-info
+    // +flex($fd: column, $jc: sb)
+    // height: 100%
+    &_title
+        font-size: rem(30)
+        font-weight: bold
+        margin-bottom: 10px
+    &_ul
+    &_li
+    &_description
+        margin-bottom: vw(50)
+    &_btn
+        padding-top: vw(40)
+        border-top: 1px dotted cr(gy-ed)
+        +flex($jc: end)
+        +mg(x, -5px)
+        &-item
+            +pd(x, 5px)

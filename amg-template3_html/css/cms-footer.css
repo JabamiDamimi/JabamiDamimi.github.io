@@ -1,0 +1,33 @@
+/*----------------------------------------
+Jhuang Ping Editor (c) & Management Update
+v1.2 | 2019.03.15
+----------------------------------------*/
+.gotopBox { display: none; }
+
+.pagetopbtn { z-index: 9; display: flex; flex-direction: column; justify-content: center; align-items: center; width: 30px; height: 30px; border-radius: 0px; color: #fff; background: #000; opacity: .5; filter: alpha(opacity=50); transition: all .3s; cursor: pointer; box-sizing: initial; position: fixed; top: auto; right: 0px; bottom: 20px; }
+.pagetopbtn:before { line-height: 1; content: '\f077'; font-family: "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands"; padding-bottom: 4px; font-size: 1.6rem; }
+.pagetopbtn:hover { opacity: .5; }
+
+.footer-bg { background: url("../images/footer-bg.jpg") no-repeat center fixed; background-size: cover; min-height: 398px; padding: 138px 0 124px 0; }
+@media all and (max-width: 980px) { .footer-bg { min-height: inherit; padding: 20px 0; } }
+
+.footer-box { display: flex; flex-direction: row; flex-wrap: nowrap; padding: 0 10px; }
+.footer-box > div:nth-of-type(2), .footer-box > div:nth-of-type(3) { min-width: 280px; }
+.footer-box > div:nth-of-type(2), .footer-box > div:nth-of-type(3), .footer-box > div:nth-of-type(4) { padding: 0 40px; font-size: 16px; letter-spacing: 1px; color: #ffffff; line-height: 30px; }
+.footer-box > div:nth-of-type(2) a, .footer-box > div:nth-of-type(3) a, .footer-box > div:nth-of-type(4) a { color: #ffffff; }
+.footer-box > div:nth-of-type(2) font, .footer-box > div:nth-of-type(3) font, .footer-box > div:nth-of-type(4) font { display: block; font-size: 24px; font-weight: bold; padding-bottom: 20px; line-height: 100%; }
+.footer-box > div:nth-of-type(2) i, .footer-box > div:nth-of-type(3) i, .footer-box > div:nth-of-type(4) i { font-size: 34px; display: inline-block; vertical-align: middle; padding-right: 10px; }
+.footer-box > div { padding: 0 10px; border-right: 1px solid #fff; }
+.footer-box > div:last-child { border-width: 0; }
+.footer-box > div:nth-of-type(1) { width: 290px; font-size: 50px; color: #fff; line-height: 100%; font-weight: normal; }
+@media all and (max-width: 980px) { .footer-box { flex-direction: column; }
+  .footer-box > div { width: 100% !important; padding: 20px 10px 20px 10px !important; border-bottom: 1px solid rgba(255, 255, 255, 0.3); border-right-width: 0; }
+  .footer-box > div:nth-of-type(1) { font-size: 38px; } }
+
+.copyright { background: #133777; padding: 34px 0; }
+
+.copyright-box { padding: 0 10px; display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between; align-items: center; letter-spacing: 1px; font-size: 15px; line-height: 24px; color: #ffffff; }
+.copyright-box > div:last-child a { text-decoration: underline; color: #fff; }
+.copyright-box > div:last-child a:hover { text-decoration: none; }
+@media all and (max-width: 768px) { .copyright-box { flex-direction: column; justify-content: flex-start; align-items: flex-start; }
+  .copyright-box > div:last-child { padding-top: 15px; } }

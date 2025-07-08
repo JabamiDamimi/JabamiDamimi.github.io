@@ -1,0 +1,56 @@
+@charset "utf-8"
+
+// Grid Mixin -----------------------------------------------------------------
+@mixin gd($val, $both, $mgb: 30px)
+    $percent: 100% / $val
+
+    +flex($fw: wp, $ai: stretch)
+    margin-left: vw(-$both/2)
+    margin-right: vw(-$both/2)
+
+    > *
+        +fl-item($percent, t)
+        padding-left: vw($both/2)
+        padding-right: vw($both/2)
+        margin-bottom: $mgb
+        @content
+
+@mixin l-gd($both: 30,$mgb: 30px)
+    margin-left: vw(-$both/2)
+    margin-right: vw(-$both/2)
+    & > *
+        padding-right: vw($both/2)
+        padding-left: vw($both/2)
+        margin-bottom: $mgb
+// Grid SASS ------------------------------------------------------------------
+@mixin md-grid()
+    [class*="l-gd-"]
+        +flex($fw: wrap)
+    .l-gd
+        @each $val in $gridArray
+            &-#{$val}
+                > *
+                    +fl-item(calc(100%/#{$val}), t)
+                    @if $val <= 2
+                        +rwdw-max(phone)
+                            +fl-item(100%)
+                    @else if $val <= 3
+                        +rwdw-max(pad)
+                            +fl-item(50%)
+                        +rwdw-max(phone)
+                            +fl-item(100%)
+                    @else if $val <= 4
+                        +rwdw-max(pc)
+                            +fl-item(calc(100%/3))
+                        +rwdw-max(pad)
+                            +fl-item(50%)
+                        +rwdw-max(phone)
+                            +fl-item(100%)
+                    @else if $val <= 6
+                        +rwdw-max(pc)
+                            +fl-item(calc(100%/3))
+                        +rwdw-max(pad)
+                            +fl-item(50%)
+                        +rwdw-max(phone)
+                            +fl-item(100%)
+        @content

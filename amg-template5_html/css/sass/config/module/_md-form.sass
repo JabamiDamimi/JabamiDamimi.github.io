@@ -1,0 +1,40 @@
+@charset "utf-8"
+
+@mixin md-form()
+    .inpt
+        &-select
+            position: relative
+            display: inline-block
+            background: rgba(#fff,.35)
+            width: auto
+            line-height: 0px;
+            border-style: solid
+            border-width: 1px 
+            border-color: #B6B7B7
+            border-radius: 0px
+            &::after
+                content: ''
+                position: absolute
+                top: calc(50% - 3px)
+                right: 9px
+                text-align: center
+                border-width: 5px
+                border-style: solid
+                border-color: #333 $u-re-color $u-re-color $u-re-color
+            select
+                font-size: rem(16)
+                border-style: solid
+                border-width: 1px 
+                border-color: #B6B7B7
+                border-radius: 10px
+                appearance: none
+                padding: 4px 5px
+                padding-right: 25px
+                text-align: center
+                max-width: inherit
+                border: none
+                background: rgba(#fff,.35)
+                width: 100%
+                outline: none
+                &::-ms-expand
+                    display: none

@@ -1,0 +1,47 @@
+@charset "utf-8"
+
+@mixin md-javascript()
+    /* Javascript href ------------------------------------------------------------ */
+    [data-href], [data-open]
+        cursor: pointer
+    
+    /* javascript Image ----------------------------------------------------------- */
+    [data-imgfix]
+        position: relative
+        line-height: 0
+        +trs()
+        overflow: hidden
+        &::before
+            content: ''
+            display: block
+            width: 100%
+        > *
+            position: absolute
+            top: 0px
+            left: 0px
+            width: 100%
+            height: 100%
+            +flex-center()
+            background-repeat: no-repeat
+            background-position: center
+            +trs()
+        img
+            display: none
+    [data-imgfix="full"] > *
+        background-size: auto 100%
+    [data-imgfix="out"] > *
+        background-size: cover
+    [data-imgfix="in"] > *
+        background-size: contain
+
+    @content
+
+//  Image Mixin ---------------------------------------------------------------        
+@mixin md-imgfix-h($h: 9, $w: 16, $patch: null)
+    &::before
+        @if $h == full
+            padding-bottom: 100%
+            @if $patch != null
+                padding-top: $patch + px
+        @else 
+            +pa-h($h, $w, $patch)

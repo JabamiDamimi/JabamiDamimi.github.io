@@ -1,0 +1,23 @@
+@charset 'utf-8'
+
+@mixin md-default()
+	$htmlSize: map-get($default, htmlFz)
+	html
+		@if $htmlSize != null
+			font-size: $htmlSize + px
+			// @if $defaultFz == 16
+			// 	+rwdw-min($rwd-pad)
+			// 		font-size: 11.25px
+			// @else
+			// 	+rwdw-max($rwd-pad)
+			// 		font-size: 8.88889px
+	body 
+		font-family: $fontDefault
+		font-size: rem(map-get($default, bodyFz))
+		line-height: lh()
+		letter-spacing: 1px
+		color: map-get($default, bodyCr)
+		overflow-x: hidden
+		opacity: 0
+		animation: m-opacity_in 1s both
+		@content

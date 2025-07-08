@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Atomic Design</title>
+    <meta name="title" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="web design,網頁設計,web,網頁,網站,設計,前端" />
+    <meta name="copyright" content="" />
+    <link rel="canonical" href="網址" itemprop="url" />
+    <link rel="stylesheet" href="../css/icom/style.css">
+
+    <link rel="stylesheet" href="../css/module.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/el.css">
+</head>
+
+<body id="el">
+    <div class="ad-bx js-vue">
+        <h2 class="ad-h2">ICON</h2>
+        <p class="ad-pre-name">data-icon</p>
+        <div class="row">
+            <div class="col-md-3 ad-icon" v-for="val in icon">
+                <div class="ad-icon_ctr">
+                    <div class="ad-icon_pic" :data-icon="val.name"></div>
+                    <div class="ad-icon_code">
+                        <div class="ad-item-iconname">{{val.name}}</div>
+                        <div class="ad-item-code">\{{val.code}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/plugin/jquery/jquery-3.3.1.min.js"></script>
+    <script src="../js/plugin/vue/vue.min.js"></script>
+    <script src="../js/tool.js"></script>
+    <script>
+        $(function () {
+            new Vue({
+                el: '.js-vue',
+                data: {
+                    icon: [
+                        {name: 'scroll', code: 'e900'},
+                        {name: 'chevron-left', code: 'e901'},
+                        {name: 'chevron-right', code: 'e902'},
+                        {name: 'clock', code: 'e903'},
+                        {name: 'mail', code: 'e904'},
+                        { name: 'phone', code: 'e905' },
+                        { name: 'sphere', code: 'e9c9' },
+                        { name: 'TelecomSwitchboard', code: 'e906' },
+                        { name: 'doorLock', code: 'e907' },
+                        { name: 'informationSecurity', code: 'e908' },
+                        { name: 'process', code: 'e909' },
+                        { name: 'IOT', code: 'e90b' },
+                        { name: 'weakCurrent', code: 'e90a'},
+                    ],
+                },
+            })
+        });
+    </script>
+</body>
+
+</html>

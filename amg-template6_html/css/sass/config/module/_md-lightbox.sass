@@ -1,0 +1,107 @@
+@charset "utf-8"
+
+@mixin md-lightbox()
+    .is-lbox-open
+        overflow: hidden !important
+    .m-lbox
+        position: fixed
+        top: 0px
+        left: 0px
+        width: 100vw
+        height: 100vh
+        z-index: 9999
+        opacity: 0
+        +trs()
+
+        &_toolbar
+            &-close
+                position: absolute
+                top: 0
+                right: 0
+                z-index: 1
+                cursor: pointer
+                transform: translate(100%,-100%)
+                +trs()
+
+                .m-btn
+                    +flex-center()
+                    position: fixed
+                    top: vh(40)
+                    right: vw(35)
+                    border-radius: 100%
+                    width: 60px
+                    height: 60px
+                    background: cr(red)
+                    color: #fff
+                    +rwdw-min()
+                        &:hover
+                            span
+                                transform: rotate(225deg)
+                    
+                span
+                    position: relative
+                    width: 21px
+                    height: 21px
+                    display: block
+                    transform: rotate(45deg)
+                    +trs()
+                    &::before,&::after
+                        content: ''
+                        display: block
+                        background: #fff
+                        +pos-center()
+                        +trs(1)
+                    &::before
+                        width: 0px
+                        height: 2px
+                    &::after
+                        width: 2px
+                        height: 0px
+
+        &_mask
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background: rgba(#000, .7)
+        &_ctr
+        &_ir
+
+        &_movie
+            position: relative
+            +pa-h()
+            iframe
+                position: absolute
+                top: 0px
+                left: 0px
+                width: 100%
+                height: 100%
+
+        &.is-open
+            opacity: 1
+
+        &.is-open &
+            &_toolbar
+                &_close
+                    transform: translate(0,0)
+                    span
+                        &::before
+                            width: 100%
+                        &::after
+                            height: 100%
+
+        &-video
+
+            .m-lbox
+                &_ir
+                    width: per(1275)
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                    +rwdw-max(phone)
+                        width: 90%
+
+    .m-lbox
+        @content

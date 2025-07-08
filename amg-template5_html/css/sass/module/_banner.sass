@@ -1,0 +1,144 @@
+/* Banner (m-bn) ============================================================== */
+$bnWidth: 1920
+$bnHeight: 300
+$bnMask: false // true, false
+$bnMaskStyle: style01
++md-banner()
+
+.m-bn--index
+    background: $reColor
+    .m-bn
+        &_wp
+            &-bg
+                position: absolute
+                bottom: 0px
+                left: 0px
+                z-index: 10
+        &_ctr
+        &_img
+            &_el
+                +md-imgfix-h(980, 1920)
+        &_info
+            justify-content: flex-start
+            align-items: flex-end
+        &_slogan
+            background: rgba(cr(white), .85)
+            margin-left: vw(85)
+            margin-bottom: vw(70)
+            +pd(x, rem(30))
+            padding-top: rem(65)
+            padding-bottom: rem(55)
+            position: relative
+            &::before
+                pointer-events: none
+                content: ''
+                position: absolute
+                top: -9px
+                left: -9px
+                width: calc(100% + 18px)
+                height: calc(100% + 18px)
+                border: 1px solid cr(white)
+
+            &_main
+                font-size: rem(40)
+                font-weight: bold
+                color: cr(gy-70)
+                +flex-center()
+                +mg(x, rem(-20))
+                margin-bottom: rem(20)
+                > *
+                    +pd(x, rem(20))
+                span
+                    position: relative
+                    &::after
+                        content: 'x'
+                        position: absolute
+                        top: 17px
+                        right: -1px
+                        display: inline-block
+                        font-size: rem(18)
+                        font-weight: normal
+
+                    &:last-child::after
+                        display: none
+
+            &_sub
+                font-size: rem(20)
+                color: cr(gy-999)
+                font-family: font(ql)
+                text-align: center
+
+    +rwdw-max(1440)
+        .m-bn
+            &_slogan
+                &_main
+                    font-size: rem(35)
+                    span::after
+                        top: 10px
+                &_sub
+
+    +rwdw-max()
+        .m-bn
+            &_slogan
+                &_main
+                    font-size: rem(25)
+                    span::after
+                        top: 3px
+                &_sub
+                    font-size: rem(16)
+
+    +rwdw-max(sm)
+        .m-bn
+            &_img
+                &_el
+                    +md-imgfix-h(500, 575)
+            &_info
+            &_slogan
+                margin: auto
+                padding: rem(30) rem(15)
+                &::before
+                    top: -4px
+                    left: -4px
+                    width: calc(100% + 8px)
+                    height: calc(100% + 8px)
+                &_main
+                    margin-bottom: rem(10)
+
+.m-bn--inside
+    background: $reColor
+    .m-bn
+        &_wp
+            &-bg
+                position: absolute
+                bottom: 0px
+                left: 0px
+                z-index: 10
+        &_img
+            &_el
+                +md-imgfix-h(500, 1920)
+        &_info
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            +flex($fd: column)
+        &_title
+            font-size: rem(50)
+            color: cr(white)
+            font-weight: bold
+    +rwdw-max(pc)
+        .m-bn
+            &_title
+                font-size: rem(40)
+    +rwdw-max()
+        .m-bn
+            &_img
+                &_el
+                    +md-imgfix-h(500, $rwd)
+    +rwdw-max(sm)
+        .m-bn
+            &_img
+                &_el
+                    +md-imgfix-h(500, 575)
+            &_title
+                font-size: rem(30)

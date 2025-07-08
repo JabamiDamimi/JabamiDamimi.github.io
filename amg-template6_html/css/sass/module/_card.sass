@@ -1,0 +1,155 @@
+/* Card (m-card) ============================================================== */
++md-card()
+
+/* Card Index */
+.m-crd--idx-cls
+    .m-crd
+        &_pic
+            +md-imgfix-h(530, 435)
+        &_ctr
+            position: absolute
+            left: 50%
+            bottom: 30px
+            width: calc(100% - 60px)
+            // background: rgba(cr(white), .9)
+            transform: translateX(-50%)
+            padding: 20px 35px
+            +trs()
+        &_title
+            font-size: rem(30)
+            font-weight: bold
+            color: cr(black)
+    +rwdw-min()
+        &:hover
+            .m-crd
+                &_pic
+                    transform: scale(1.05)
+                &_ctr
+                    // background: rgba(cr(white), 1)
+    +rwdw-max(pc)
+        .m-crd
+            &_title
+                font-size: rem(22)
+    +rwdw-max(md)
+        .m-crd
+            &_title
+                font-size: rem(20)
+
+.m-crd--idx-rpro
+    .m-crd
+        &_pic
+            margin-bottom: 25px
+            +md-imgfix-h(385, 330)
+        &_info
+            text-align: center
+        &_name
+            font-size: rem(18)
+            margin-bottom: 5px
+            display: inline-block
+            +pd(x, 10px)
+            position: relative
+            &::before
+                content: ''
+                position: absolute
+                z-index: -1
+                top: -2px
+                left: 0px
+                width: 0px
+                height: 100%
+                background: cr(pink)
+                +trs()
+        &_price
+            font-size: rem(24)
+            font-weight: bold
+            color: cr(black)
+            +trs()
+    +rwdw-min()
+        &:hover
+            .m-crd
+                &_pic
+                    > *
+                        transform: scale(1.05)
+                &_name
+                    color: cr(white)
+                    &::before
+                        width: 100%
+                &_price
+                    color: cr(pink)
+    +rwdw-max(pc)
+        .m-crd
+            &_name
+            &_price
+                font-size: rem(22)
+    +rwdw-max(md)
+        .m-crd
+            &_name
+            &_price
+                font-size: rem(18)
+
+.m-crd--idx-cate
+    .m-crd
+        &_pic
+            max-width: 120px
+            width: 100%
+            +md-imgfix-h(120, 120)
+            +mg(x, auto)
+            margin-bottom: 15px
+        &_name
+            text-align: center
+            font-size: rem(24)
+    +rwdw-max(pc)
+        .m-crd
+            &_name
+                font-size: rem(18)
+
+/* Products */ 
+.m-crd--pro
+    .m-crd
+        &_pic
+            +md-imgfix-h(300, 400)
+            margin-bottom: 10px
+        &_info
+            +flex($jc: sb, $ai: end)
+            +pd(x, 10px)
+            padding-bottom: 5px
+            position: relative
+            &::before
+                content: ''
+                position: absolute
+                left: 0px
+                bottom: 0px
+                width: 0px
+                height: 1px
+                background: cr(gy-ed)
+                +trs(1)
+        &_name
+            +trs()
+        &_price
+            font-weight: bold
+            font-size: rem(20)
+            color: cr(black)
+            +trs()
+            &::before
+                display: inline-block
+                content: attr(data-unit)
+                margin-right: 5px
+                font-size: rem(18)
+    +rwdw-min()
+        &:hover
+            .m-crd
+                &_pic
+                    > *
+                        transform: scale(1.05)
+                &_info
+                    &::before
+                        width: 100%
+                &_name
+                    color: cr(black)
+                &_price
+                    color: cr(pink)
+    +rwdw-max(pc)
+        .m-crd
+            &_price
+                font-size: rem(18)
+                &::before
+                    font-size: rem(16)

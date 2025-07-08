@@ -1,0 +1,78 @@
+/* Footer ===================================================================== */
+.ft
+    +pd(y, rem(20))
+    position: relative
+    // background: cr(black-1f)
+    background-repeat: no-repeat
+    background-size: cover
+    background-image: linear-gradient(90deg,#160f30e6 100%,#2416631c 0%,#2416631c 0%,#160f30e6 100%),url(../img/common/ft-bg.jpg)
+    &_wp
+        +flex($ai: center)
+    &_logo
+        +fl-item(50px, 0)
+    &_info
+        +fl-item(calc(100% - 50px), 0)
+        padding-left: rem(50)
+    &_gotop    
+        position: absolute
+        top: -35px
+        right: 5%
+        z-index: 9999
+        +trs()
+        &.is
+            &-show
+                opacity: 1
+            &-move
+                position: fixed
+                top: auto
+                bottom: 20px
+                right: 20px
+            &-top
+                opacity: 0
+                pointer-events: none
+    +rwdw-max(1440)
+        +pd(y, rem(15))
+        &_gotop
+            top: -90px
+    +rwdw-max(sm)
+        &_wp
+            flex-direction: column
+        &_logo
+            margin-bottom: rem(20)
+        &_info
+            +fl-item(100%)
+            +pd(x, rem(50))
+.ft-data
+    border-bottom: 1px solid cr(gy-666)
+    padding-bottom: rem(10)
+    margin-bottom: rem(10)
+    +flex($jc: end)
+    +mg(x, rem(-5))
+    &_item
+        +pd(x, rem(5))
+        position: relative
+        &::before
+            font-family: $icon
+            display: inline-block
+            margin-right: rem(3)
+            transform: translateY(2px)
+            color: cr(white)
+        &--tel::before
+            content: '\e905'
+        &--mail::before
+            content: '\e904'
+    &_link
+        color: cr(gy-ccc)
+    +rwdw-min()
+        &_link
+            &:hover
+                color: cr(white)
+    +rwdw-max(sm)
+        justify-content: center
+        flex-wrap: wrap
+.ft-copyright
+    font-size: rem(12)
+    color: cr(gy-666)
+    text-align: right
+    +rwdw-max(sm)
+        text-align: center

@@ -1,0 +1,21 @@
+/* Products =================================================================== */ 
+.pro-stn
+.pro-ctr
+    margin-bottom: pa(200)
+
+.pro-list
+    +flex($fw: wrap)
+    +mg(x, rem(-15))
+    &_item
+        +fl-item(calc(100%/4), 0)
+        +pd(x, rem(15))
+        margin-bottom: rem(50)
+    +rwdw-max()
+        &_item
+            +fl-item(calc(100%/3))
+    +rwdw-max(md)
+        &_item
+            +fl-item(50%)
+    +rwdw-max(sm)
+        &_item
+            +fl-item(100%)

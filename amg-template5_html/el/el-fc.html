@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Atomic Design</title>
+    <meta name="title" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="web design,網頁設計,web,網頁,網站,設計,前端" />
+    <meta name="copyright" content="" />
+    <link rel="canonical" href="網址" itemprop="url" />
+    <link rel="stylesheet" href="../css/module.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/el.css">
+</head>
+
+<body id="el">
+    <div class="ad-bx js-vue">
+        <h2 class="ad-h2">Fonts Color</h2>
+        <p class="ad-pre-name">u-fc-</p>
+        <ul class="row">
+            <li class="col-md-3" v-for="val in fc">
+                <div class="ad-fc">
+                    <div class="ad-fc_toning">
+                        <ul class="ad-fc_code">
+                            <li class="ad-item-code"><span :class="'u-fc-' + val.name">{{val.code}}</span></li>
+                            <li class="ad-item-sass"><span>{{val.name}}</span></li>
+                            <li class="ad-item-class"><span>u-fc-{{val.name}}</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <script src="../js/plugin/jquery/jquery-3.3.1.min.js"></script>
+    <script src="../js/plugin/vue/vue.min.js"></script>
+    <script src="../js/tool.js"></script>
+    <script>
+        $(function () {
+            new Vue({
+                el: '.js-vue',
+                data: {
+                    fc: [
+                        { name: 'hover', code: '#007bff' },
+                        { name: 'black', code: '#000' },
+                        { name: 'white', code: '#fff'},
+                        { name: 'gy-333', code: '#333'},
+                        { name: 'gy-666', code: '#666'},
+                        { name: 'gy-999', code: '#999'},
+                        { name: 'gy-ccc', code: '#ccc'},
+                        { name: 'gy-ed', code: '#ededed'},
+                        { name: 'light-blue', code: '#EAEFF5'},
+                        { name: 'blue', code: '#3E68A8'},
+                        { name: 'blue-green', code: '#697D84'},
+                        { name: 'line', code: '#46A837'},
+                        { name: 'facebook', code: '#375691'},
+                        { name: 'skype', code: '#00AFF0'},
+                    ],
+                },
+            })
+        });
+
+
+    </script>
+</body>
+
+</html>

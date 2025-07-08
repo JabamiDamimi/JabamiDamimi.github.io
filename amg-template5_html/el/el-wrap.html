@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Atomic Design</title>
+    <meta name="title" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="web design,網頁設計,web,網頁,網站,設計,前端" />
+    <meta name="copyright" content="" />
+    <link rel="canonical" href="網址" itemprop="url" />
+    <link rel="stylesheet" href="../css/module.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/el.css">
+</head>
+
+<body id="el">
+    <div class="ad-bx js-vue">
+        <h2 class="ad-h2">Wrap System</h2>
+        <p class="ad-pre-name">l-wp-</p>
+        <div class="row">
+            <div class="ad-item-class col-sm-3">l-wp-html</div>
+            <div class="ad-item-class col-sm-3">l-wp-main</div>
+            <div class="ad-item-class col-sm-3">l-wp-full</div>
+            <div class="ad-item-class col-sm-3">l-wp-max</div>
+            <div class="ad-item-class col-sm-3" v-for="val in wp">l-wp-{{val}}</div>
+        </div>
+    </div>
+
+    <script src="../js/plugin/jquery/jquery-3.3.1.min.js"></script>
+    <script src="../js/plugin/vue/vue.min.js"></script>
+    <script src="../js/tool.js"></script>
+    <script>
+        $(function () {
+            new Vue({
+                el: '.js-vue',
+                data: {
+                    wp: [1680, 1440, 1366, 1280, 1140, 1024, 960, 720, 540],
+                },
+            })
+        });
+
+
+    </script>
+</body>
+
+</html>

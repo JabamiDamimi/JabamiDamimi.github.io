@@ -1,0 +1,122 @@
+/* //////////////////////////////////////////////////////////////////////////// */
+/* v.1.5.2 [07.31.2020]                                                         */
+/* //////////////////////////////////////////////////////////////////////////// */
+// Config =====================================================================
+@import helpers/_helpers-setting
+@import extend/_extend-setting
+@import module/_module-setting
+
+//圖片路徑
+$imgPath: "../images/"
+
+// Media 
+//-----------------------------------------------------------------------------
+// PC: 1920x1080, 1680x1050, 1600x900, 1440x900, 1366x800, 1366x768, 1024x768
+// Pad: 800x1280, 768x1024, 600x1024, 600x962
+// Phone: [iPhone 6/7/8 Plus, 414x736] [iPhone 6/7/8, 375x667] [iPhone 5/SE, 320x568]
+//-----------------------------------------------------------------------------
+$xl: 1200
+$lg: 992
+$md: 768
+$sm: 575
+
+$rwd: 1200 //Menu轉換手機尺寸
+$rwd-pc: 1366 //電腦尺寸
+$rwd-pcs: $xl //小電腦尺寸
+$rwd-pad: $lg //平板尺寸
+$rwd-pads: $md //小平板尺寸
+$rwd-phone: $sm //手機尺寸
+$rwd-phones: 320 //小手機尺寸
+
+// Default (md-default)
+// 預設字級 16px
+$default: (htmlFz: 10, bodyFz: 16, bodyLh: 24, bodyCr: #707070)
+
+// Fonts Style
+// $fontDefault  預設 ( Arial, 'Microsoft JhengHei', sans-serif )
+$fontDefault: Arial, 'Microsoft JhengHei', sans-serif
+$font: (dfk:'DFKai-sb')
+
+// Typography Default
+
+// Color
+$color: ( base: map-get($default, bodyCr),
+hover: #007bff,
+red: #f00,
+black: #000,
+white: #fff,
+black-1f: #1f1f1f,
+gy-333: #333,
+gy-444: #444,
+gy-666: #666,
+gy-70: #707070,
+gy-888: #888,
+gy-999: #999,
+gy-ccc: #ccc,
+gy-ed: #ededed,
+line: #46A837,
+facebook: #375691,
+skype: #00AFF0,
+blue: #005CAF,
+blue-l-1: #BDE6E8,
+purple: #5147e7)
+
+// background color
+$backgroundColor: (black: #000,
+white: #fff,
+gy-333: #333,
+gy-666: #666,
+gy-ccc: #ccc)
+
+// Typography (md-typography)
+// Font Awesome Icon
+$fa: 'Font Awesome 5 Solid','Font Awesome 5 Regular','Font Awesome 5 Brands'
+$fas: 'Font Awesome 5 Solid'
+$far: 'Font Awesome 5 Regular'
+$fab: 'Font Awesome 5 Brands'
+
+// Icomoon ICON
+$icon: 'icomoon'
+
+// Icon Setting
+$iconGlyph: $icon
+$icons: (scroll: \e900,
+chevron-left: \e901,
+chevron-right: \e902,
+clock: \e903,
+mail: \e904,
+phone: \e905,
+sphere: \e9c9,
+TelecomSwitchboard: \e906,
+doorLock: \e907,
+informationSecurity: \e908,
+process: \e909,
+IOT: \e90b,
+weakCurrent: \e90a,
+external-link: \e90c,
+link: \e90d,
+link-2: \e90e,
+log-in: \e90f,
+log-out: \e910,
+paperclip: \e911,
+plus: \e912,
+share: \e913,
+tag: \e914,
+trash-2: \e915,
+user: \e916,
+map-pin: \e91d,
+instagram: \e917,
+line: \e918,
+skype: \e919,
+twitter: \e91a,
+wechat: \e91b,
+youtube: \e91c,
+facebook: \ea90,
+facebook2: \ea91,
+undo2: \e967,
+corner-up-left: \e91e,
+shopping-cart: \e91f)
+
+// Wrap (l-wp)
+$wpRange: 1024 // 基本範圍
+$wpBoth: 15 // 左右間距(px)

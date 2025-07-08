@@ -1,0 +1,139 @@
+/*----------------------------------------
+Jhuang Ping Editor (c) & Management Update
+v1.2 | 2019.03.15
+----------------------------------------*/
+/* Reset ====================================================================*/
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+body, div, ul, ol, li, h1, h2, h3, h4, h5, h6, form, input, button, textarea, th, td, figure { margin: 0; padding: 0; }
+
+img { max-width: 100%; height: auto; border: 0; }
+
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal; }
+
+input, button, textarea, select, optgroup, option { font-family: inherit; font-size: inherit; font-style: inherit; font-weight: inherit; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+input, button, textarea, select { *font-size: 100%; }
+
+ol, ul, li, menu { list-style: none; }
+
+a { text-decoration: none; -webkit-transition: all .3s; -moz-transition: all .3s; -o-transition: all .3s; transition: all .3s; }
+
+input, textarea { outline: none; }
+
+section, article, aside, footer, header, nav, main { display: block; }
+
+/* Default ====================================================================*/
+html { font-size: 10px; }
+
+body { font-family: "PT Sans", Arial, "Microsoft JhengHei", sans-serif; font-size: 1.6rem; line-height: 1.2; letter-spacing: 0px; color: #202020; overflow-x: hidden; -webkit-text-size-adjust: 100%; background: url(../images/index-bg.jpg) no-repeat top center; background-size: auto; }
+
+.wrap { max-width: 1210px; margin: 0 auto; }
+@media all and (max-width: 992px) { .wrap { padding: 0 5%; } }
+
+.main { margin-bottom: 110px; }
+.main .wrap { max-width: 875px; }
+
+.table_scroll { overflow-x: auto; }
+
+a { color: #1EA78D; }
+
+/* Header =====================================================================*/
+header { display: flex; justify-content: center; width: 100%; z-index: 99999; }
+header .wrap { width: 100%; position: relative; padding-top: 45px; margin-top: 20px; margin-bottom: 18px; transition: all .3s; }
+header.menuMov .wrap { margin-top: 10px; margin-bottom: 8px; }
+header.menuMov .menu-lists { padding-top: 26px; }
+@media all and (max-width: 1024px) { header .wrap { padding: 0 5%; margin-top: 18px; grid-template-columns: 160px 1fr 120px; } }
+@media all and (max-width: 992px) { header .wrap { width: 100%; display: flex; padding-top: 8px; flex-direction: column; align-items: flex-start; transition: all 1s; } }
+
+.logo { display: flex; align-items: center; justify-content: center; }
+@media all and (max-width: 992px) { .logo { max-width: 160px; } }
+
+/* Menu =======================================================================*/
+.menu { display: flex; justify-content: flex-end; align-items: center; }
+@media all and (max-width: 992px) { .menu { display: none; width: 100%; position: absolute; top: 87px; left: 0px; z-index: 9999; background: #302F2E; max-height: calc(100vh - 87px); overflow-y: auto; } }
+
+.menu-btn { width: 40px; height: 30px; cursor: pointer; position: absolute; z-index: 99991; top: 10px; right: 5%; display: flex; flex-direction: column; justify-content: space-around; align-items: center; }
+.menu-btn span { width: 70%; height: 3px; display: block; background: #000; border-radius: 5px; transition: all .3s; }
+.menu-btn.open span { position: absolute; }
+.menu-btn.open span:nth-child(1) { transform: rotate(-45deg); }
+.menu-btn.open span:nth-child(2) { transform: rotate(45deg); }
+.menu-btn.open span:nth-child(3) { opacity: 0; }
+@media all and (min-width: 993px) { .menu-btn { display: none; } }
+
+.menu-dropDown { position: relative; }
+
+.menu-lists { display: none; position: absolute; z-index: 9; }
+
+.menu-fold { display: none; position: absolute; top: 0px; right: 0px; width: 50px; height: 50px; border-left: 1px solid #fff; }
+.menu-fold:before, .menu-fold:after { content: ''; position: absolute; top: 50%; right: calc(50% - 5px); display: block; background: #fff; width: 10px; height: 1px; transition: all .2s; }
+.menu-fold:after { transform: rotate(90deg); }
+.menu-fold.open:after { transform: rotate(180deg); }
+@media all and (max-width: 992px) { .menu-fold { display: block; } }
+
+.menu-control-position { width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: flex-end; }
+@media all and (max-width: 992px) { .menu-control-position { flex-direction: column; align-items: flex-start; } }
+
+.menu-main { width: 100%; order: 1; display: flex; flex-direction: row; justify-content: center; font-size: 1.8rem; margin-top: 50px; margin-bottom: 30px; }
+.menu-main li { padding: 0 36px; }
+.menu-main a { color: #000; white-space: nowrap; display: block; position: relative; overflow: hidden; padding: 0 18px; font-size: 1.8rem; font-weight: bold; }
+.menu-main a:hover { color: #e94d00; opacity: 1; }
+@media all and (max-width: 992px) { .menu-main { width: 100%; order: 2; flex-direction: column; padding: 0px; margin: 0px; }
+  .menu-main li { margin: 0px; padding-left: 0px; padding-right: 0px; }
+  .menu-main li:first-child a { border-top: 1px solid #fff; }
+  .menu-main li:not(:last-child) a { border-bottom: 1px solid #fff; }
+  .menu-main a { color: #fff; padding: 15px 12px; text-transform: capitalize; }
+  .menu-main a:before { display: none; } }
+
+.menu-group { width: 100%; order: 2; display: flex; flex-direction: row; justify-content: flex-start; color: #000; font-size: 1.5rem; position: absolute; top: 0px; left: 0px; }
+.menu-group a { color: #000; text-transform: uppercase; }
+.menu-group a:hover { opacity: .5; }
+.menu-group li { padding: 0px; display: flex; align-items: center; }
+@media all and (max-width: 992px) { .menu-group { order: 1; flex-wrap: wrap; justify-content: flex-start; font-size: 1.5rem; width: 100%; position: static; color: #fff; }
+  .menu-group li { padding-left: 12px; padding-right: 12px; }
+  .menu-group li:nth-child(1) { padding-right: 0px; }
+  .menu-group li:nth-child(2) { padding-left: 0px; }
+  .menu-group li:last-child:before { display: none; }
+  .menu-group a { color: #fff; padding: 15px 12px; } }
+
+/* Search */
+.menu-search { position: absolute; right: 0px; }
+.menu-search a { text-transform: uppercase; }
+.menu-search a:hover { opacity: .5; }
+.menu-search ::-webkit-input-placeholder { color: #000; }
+.menu-search :-moz-placeholder { color: #000; }
+.menu-search ::-moz-placeholder { color: #000; }
+.menu-search :-ms-input-placeholder { color: #000; }
+.menu-search input { width: 135px; border: none; margin-right: 6px; padding: 1px 5px; color: #000; background-color: transparent; border-bottom: 1px solid #000; font-size: 1.6rem; transition: all .3s; }
+@media all and (max-width: 992px) { .menu-search { display: flex; width: 100%; position: static; }
+  .menu-search ::-webkit-input-placeholder { color: #fff; }
+  .menu-search :-moz-placeholder { color: #fff; }
+  .menu-search ::-moz-placeholder { color: #fff; }
+  .menu-search :-ms-input-placeholder { color: #fff; }
+  .menu-search input { width: 100%; padding: 4px 12px; color: #fff; border-bottom: 1px solid #7D7D7C; }
+  .menu-search input.inptOpen { width: 100%; padding: 4px 12px; } }
+
+/* Menu Style */
+.menuBasic .menu-lists { left: 0px; min-width: 140px; width: 100%; padding-top: 35px; }
+.menuBasic .menu-lists li { position: relative; background: #313030; transition: all .3s; padding: 0px; }
+.menuBasic .menu-lists li a { width: 100%; text-align: center; color: #fff; font-size: 1.6rem; text-transform: inherit; padding: 12px 10px; border-bottom: 1px solid rgba(255, 255, 255, 0.2); font-weight: normal; }
+.menuBasic .menu-lists li:hover { background: #E94D00; }
+@media all and (max-width: 992px) { .menuBasic .menu-lists { position: static; width: 100%; padding-top: 0px !important; }
+  .menuBasic .menu-lists li a { padding-left: 12px; padding-right: 12px; text-align: left; background: #0A0909; } }
+
+/* Language ===================================================================*/
+.menu-language { position: relative; }
+
+.menu-language-btn { display: none; cursor: pointer; transition: all .3s; }
+.menu-language-btn:hover { opacity: .5; }
+@media all and (max-width: 992px) { .menu-language-btn { display: none; } }
+
+.menu-language-options { display: flex; overflow: hidden; }
+.menu-language-options a { display: block; text-align: center; transition: all .3s; }
+.menu-language-options a:after { content: '|'; display: inline-block; padding: 0 5px; }
+.menu-language-options a:hover { opacity: 1 !important; }
+@media all and (max-width: 992px) { .menu-language-options { display: flex !important; position: static; width: 100%; }
+  .menu-language-options a { width: initial; font-size: 1.5rem; background: transparent; border: none; padding: 15px 12px; display: block; position: relative; }
+  .menu-language-options a:after { padding: 0px; position: absolute; right: 0px; } }

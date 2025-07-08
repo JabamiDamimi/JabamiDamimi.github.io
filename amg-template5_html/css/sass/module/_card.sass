@@ -1,0 +1,151 @@
+/* Card (m-card) ============================================================== */
++md-card()
+
+/* Card Index */
+.m-crd--idx-pro
+    position: relative
+    background: cr(white)
+    border: 1px solid cr(gy-ed)
+    padding: rem(5) rem(20) rem(60) rem(20)
+    border-radius: 10px
+    +trs()
+    .m-crd
+        &_pic
+            background: url('../img/common/crd-pic_bg.png') no-repeat center
+            background-size: 95%
+            +pd(y, vw(90))
+            &_el
+                max-width: vw(200)
+                +mg(x, auto)
+                border-radius: 100%
+                border: 2px solid cr(gy-ed)
+                +md-imgfix-h(660, 660)
+        &_ctr
+            +flex($fd: column, $ai: center)
+        &_info
+            font-size: rem(25)
+            font-weight: bold
+            color: cr(black)
+            margin-bottom: rem(30)
+            +trs()
+    +rwdw-min()
+        &:hover
+            border: 1px solid rgba(cr(purple), .5)
+            box-shadow: 0 0 10px rgba(cr(black), .3)
+            .m-crd
+                &_pic
+                    &_el
+                        > *
+                            transform: scale(1.05)
+                &_info
+                    color: cr(purple)
+    +rwdw-max(1440)
+        .m-crd
+            &_info
+                font-size: rem(20)
+    +rwdw-max(pc)
+        .m-crd
+            &_pic
+                &_el
+                    max-width: vw(200, 1366)
+    +rwdw-max()
+        .m-crd
+            &_pic
+                +pd(y, rem(80))
+                &_el
+                    max-width: 160px
+    +rwdw-max(sm)
+        .m-crd
+            &_pic
+                background-size: 300px
+                &_el
+                    max-width: 190px
+
+
+/* Card About */ 
+.m-crd--abt-ser
+    .m-crd
+        &_pic
+            width: 270px
+            height: 270px
+            border-radius: 100%
+            // box-shadow: 0 0 10px rgba(cr(gy-333), .3)
+            box-shadow: 0 0 5px rgba(cr(white), .5)
+            +mg(x, auto)
+            +md-imgfix-h(500, 500)
+            &::after
+                content: ''
+                position: absolute
+                top: 0px
+                left: 0px
+                width: 100%
+                height: 100%
+                background: rgba(cr(blue), .3)
+                +trs()
+        &_info
+            display: none
+    +rwdw-min()
+        &:hover
+            .m-crd
+                &_pic
+                    > *
+                        transform: scale(1.05)
+                    &::after
+                        opacity: 0
+    
+/* Card Products */ 
+.m-crd--pro
+    .m-crd
+        &_pic
+            +md-imgfix-h(500, 500)
+            &::after
+                content: ''
+                position: absolute
+                top: 0px
+                left: 0px
+                width: 100%
+                height: 100%
+                background: url('../img/products/crd-pic-mask.svg') no-repeat center bottom
+                background-size: contain
+        &_pic-mask
+            position: absolute
+            top: 0px
+            left: 0px
+            width: 100%
+            height: 100%
+            background: rgba(cr(blue), .5)
+            +trs()
+        &_info
+            position: relative
+            padding-bottom: 20px
+            // border-bottom: 1px solid cr(blue)
+            // &::after
+            //     content: ''
+            //     position: absolute
+            //     bottom: 0px
+            //     right: 0px
+            //     width: 20%
+            //     height: 1px
+            //     background: cr(gy-333)
+        &_name
+            display: none
+    +rwdw-min()
+        &:hover
+            .m-crd
+                &_pic-mask
+                    opacity: 0
+
+.m-crd--prol
+    .m-crd
+        &_pic
+            +md-imgfix-h(400, 500)
+            margin-bottom: 5px
+        &_name
+            font-size: rem(20)
+    +rwdw-min()
+        &:hover .m-crd
+            &_pic
+                > *
+                    transform: scale(1.05)
+            &_name
+                color: cr(blue)

@@ -1,0 +1,81 @@
+/* Index ====================================================================== */
+/* Index About */
+.idx-abt
+    margin-top: rem(40)
+    margin-bottom: vw(100)
+    position: relative
+    .c-title_wp
+        align-items: start
+    &_wp
+        +flex($fw: wrap, $ai: center)
+        &-pic
+            +fl-item(60%, 0)
+        &-info
+            +fl-item(30%, 0)
+    &_btn
+        margin-top: rem(30)
+        +flex-center($jc: start)
+    &_bg
+        position: absolute
+        top: 0px
+        left: 0px
+        transform: rotate(5deg)
+        z-index: -1
+        opacity: .5
+    +rwdw-max()
+        .c-title_wp
+            align-items: center
+        &_wp
+            justify-content: center
+            &-pic
+                position: absolute
+                top: -15%
+                right: 0px
+                width: 100%
+                height: 100%
+                opacity: .1
+            &-info
+                +fl-item(575px, 0)
+        &_btn
+            justify-content: center
+        &_bg
+            transform: rotate(-135deg)
+    +rwdw-max(lg)
+        margin-bottom: rem(50)
+    +rwdw-max(sm)
+        &_wp
+            &-pic
+                display: none
+
+/* Index Service */
+.idx-ser
+    margin-bottom: pa(120)
+    &_wp
+        &-head
+            background-repeat: no-repeat
+            background-size: cover
+            background-image: linear-gradient(90deg ,rgba(22,15,48,0.9) 100%,rgba(36,22,99,0.11) 0%,rgba(36,22,99,0.11) 0%,rgba(22,15,48,0.9) 100%),url(../img/index/ser-bg.jpg)
+            +pd(y, rem(100))
+            margin-bottom: -80px
+            .c-title
+                // margin-bottom: 0p
+                &_cht, &_eng
+                    color: cr(white)
+        &-body
+    &_swp
+        padding: 10px
+    +rwdw-max(pc)
+        &_wp
+            &-head
+                +pd(y, rem(80))
+    +rwdw-max()
+        &_wp
+            &-head
+                +pd(y, rem(60))
+                margin-bottom: -50px
+        &_swp
+            +mg(x, rem(0))
+    +rwdw-max(sm)
+        &_wp
+            &-head
+                +pd(y, rem(50))

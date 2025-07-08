@@ -1,0 +1,25 @@
+/* News ======================================================================= */ 
+.nws-list
+    margin-top: 60px
+    margin-bottom: 60px
+    &_item
+        &:not(:last-child)
+            padding-bottom: 20px
+            margin-bottom: 20px
+            border-bottom: 1px dotted cr(gy-ed)
+
+.nws-item
+    +flex($ai: center)
+    &_cls
+        +fl-item(80px, 0)
+    &_name
+        flex-grow: 1
+        font-size: rem(20)
+        color: cr(black)
+    &_time
+        +fl-item(110px, 0)
+        color: cr(gy-ccc)
+    +rwdw-min()
+        &:hover .nws-item
+            &_name
+                color: cr(pink)

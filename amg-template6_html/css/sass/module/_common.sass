@@ -1,0 +1,209 @@
+/* Common ===================================================================== */ 
+.c-stn
+    margin-top: 30px
+    margin-bottom: pa(150)
+    &_wp--col2 &_side
+        margin-bottom: 30px
+    +rwdw-min()
+        &_wp--col2
+            +flex($jc: sb)
+        &_wp--col2 &_side
+            +fl-item(280px, 0)
+            margin-bottom: 0px
+        &_wp--col2 &_ctr
+            +fl-item(calc(100% - 280px - 60px), 0)
+
+
+.c-side
+    position: relative
+    &_hamburger
+        position: relative
+        padding: 8px 10px
+        border: 1px solid cr(gy-ed)
+        border-radius: 5px
+        &-name
+            font-size: rem(20)
+            font-weight: bold
+            width: calc(100% - 50px)
+        &-icon
+            position: absolute
+            top: 3px
+            right: 0px
+            width: 40px
+            height: 40px
+    &_bar
+        position: absolute
+        display: block
+        top: 50%
+        left: 25%
+        width: 50%
+        height: 2px
+        background: cr(black)
+        +trs()
+        &:first-child
+            transform: translateY(-5px)
+        &:last-child
+            transform: translateY(5px)
+    &_hamburger.is-active &_bar
+        &:first-child
+            transform: translateY(0px) rotate(45deg)
+        &:nth-child(2)
+            opacity: 0
+            width: 0px
+        &:last-child
+            transform: translateY(0px) rotate(-45deg)
+    &_ctr
+    &_item
+        &:not(:last-child)
+            border-bottom: 1px dotted cr(gy-ed)
+    &_toggle
+        font-size: rem(18)
+        font-weight: bold
+        cursor: pointer
+        padding: 8px
+        position: relative
+        +trs()
+        .js-menu
+            position: absolute
+            z-index: 1
+            top: 0px
+            right: 0px
+            width: 50px
+            height: 100%
+            &::after
+                font-family: $icon
+                content: '\e904'
+                position: absolute
+                top: 7px
+                right: 10px
+                +trs()
+        &.is-active
+            color: cr(pink)
+            .js-menu::after
+                transform: rotate(90deg)
+    &_ul
+        display: none
+        background: cr(gy-f9)
+    &_li
+        padding: 8px 15px 8px 30px
+        position: relative
+        &::before, &::after
+            content: ''
+            position: absolute
+        &::before
+            top: 0px
+            left: 0px
+            width: 1px
+            height: 100%
+            background: cr(gy-ed)
+        &::after
+            width: 3px
+            height: 3px
+            top: 18px
+            left: 13px
+            background: cr(pink)
+            border-radius: 100%
+        &.is-active
+            &::after
+                transform: scale(2)
+    &_link
+        display: block
+    +rwdw-min()
+        &_hamburger
+            display: none
+        &_toggle:hover
+            color: cr(pink)
+        &_link:hover
+            color: cr(pink)
+    +rwdw-max()
+        &_ctr
+            display: none
+            width: 100%
+            position: absolute
+            top: 100%
+            left: 0px
+            z-index: 5
+            background: rgba(cr(white), 1)
+        &_item:last-child
+            border-bottom: 2px solid cr(gy-999)
+        &_toggle
+            +pd(y, 10px)
+        &_li
+            +pd(y, 10px)
+
+.c-title
+    color: cr(gy-333)
+    &_wp
+        &--row
+            flex-direction: row
+        &--col
+            flex-direction: column
+
+.c-title--headline
+    margin-bottom: rem(50)
+    .c-title
+        &_wp
+            +flex-center()
+        &_cht
+            font-size: rem(35)
+            font-weight: bold
+            line-height: 1
+        &_eng
+            font-size: rem(18)
+            color: cr(purple)
+    +rwdw-max(pc)
+        margin-bottom: rem(20)
+        .c-title
+            &_cht
+                font-size: rem(25)
+
+.c-text
+    line-height: lh(16, 32)
+
+.c-lbx
+    position: fixed
+    top: 0px
+    left: 0px
+    width: 100%
+    height: 100%
+    z-index: 9999
+    opacity: 0
+    pointer-events: none
+    +trs()
+    &_ctr
+        +flex-center()
+    &_bx
+        +flex-center($fd: column)
+        width: 80%
+        height: 50%
+        max-width: 575px
+        max-height: 250px
+        background: cr(white)
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        z-index: 1
+        border-radius: 5px
+        box-shadow: 0 0 10px rgba(cr(black), 1)
+    &_icon
+        color: cr(green)
+        font-size: rem(80)
+        line-height: 1
+    &_text
+        font-size: rem(18)
+        margin-bottom: rem(20)
+        text-align: center
+    &_btn
+        color: cr(gy-ccc)
+    &_mask
+        position: absolute
+        top: 0px
+        left: 0px
+        width: 100%
+        height: 100%
+        background: rgba(cr(black), .8)
+
+    &.is-show
+        opacity: 1
+        pointer-events: auto

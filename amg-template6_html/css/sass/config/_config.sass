@@ -1,0 +1,127 @@
+/* //////////////////////////////////////////////////////////////////////////// */
+/* v.1.5.2 [07.31.2020]                                                         */
+/* //////////////////////////////////////////////////////////////////////////// */
+// Config =====================================================================
+@import helpers/_helpers-setting
+@import extend/_extend-setting
+@import module/_module-setting
+
+//圖片路徑
+$imgPath: "../images/"
+
+// Media 
+//-----------------------------------------------------------------------------
+// PC: 1920x1080, 1680x1050, 1600x900, 1440x900, 1366x800, 1366x768, 1024x768
+// Pad: 800x1280, 768x1024, 600x1024, 600x962
+// Phone: [iPhone 6/7/8 Plus, 414x736] [iPhone 6/7/8, 375x667] [iPhone 5/SE, 320x568]
+//-----------------------------------------------------------------------------
+$xl: 1200
+$lg: 992
+$md: 768
+$sm: 575
+
+$rwd: 1200 //Menu轉換手機尺寸
+$rwd-pc: 1366 //電腦尺寸
+$rwd-pcs: $xl //小電腦尺寸
+$rwd-pad: $lg //平板尺寸
+$rwd-pads: $md //小平板尺寸
+$rwd-phone: $sm //手機尺寸
+$rwd-phones: 320 //小手機尺寸
+
+// Default (md-default)
+// 預設字級 16px
+$default: (htmlFz: 10, bodyFz: 16, bodyLh: 24, bodyCr: #707070)
+
+// Fonts Style
+// $fontDefault  預設 ( Arial, 'Microsoft JhengHei', sans-serif )
+$fontDefault: Arial, 'Microsoft JhengHei', sans-serif
+$font: (dfk:'DFKai-sb', rhd:'Red Hat Display')
+
+// Typography Default
+
+// Color
+$color: ( base: map-get($default, bodyCr),
+hover: #007bff,
+red: #E06666,
+black: #000,
+white: #fff,
+black-1f: #1f1f1f,
+gy-333: #333,
+gy-444: #444,
+gy-666: #666,
+gy-70: #707070,
+gy-888: #888,
+gy-999: #999,
+gy-ccc: #ccc,
+gy-ed: #ededed,
+gy-f9: #F9F9F9,
+gy-e2: #e2e2e2,
+gy-fa: #fafafa,
+line: #46A837,
+facebook: #375691,
+skype: #00AFF0,
+blue: #005CAF,
+blue-l-1: #BDE6E8,
+blue-d-1: #000044,
+purple: #5147e7,
+pink: #EDA99E,
+green: #77bf73,)
+
+// background color
+$backgroundColor: (black: #000,
+white: #fff,
+gy-333: #333,
+gy-666: #666,
+gy-ccc: #ccc,
+gy-f9: #F9F9F9)
+
+// Typography (md-typography)
+// Font Awesome Icon
+$fa: 'Font Awesome 5 Solid','Font Awesome 5 Regular','Font Awesome 5 Brands'
+$fas: 'Font Awesome 5 Solid'
+$far: 'Font Awesome 5 Regular'
+$fab: 'Font Awesome 5 Brands'
+
+// Icomoon ICON
+$icon: 'icomoon'
+
+// Icon Setting
+$iconGlyph: $icon
+$icons: (alert-circle: \e900,
+alert-traingle: \e901,
+chevron-down: \e902,
+chevron-left: \e903,
+chevron-right: \e904,
+chevron-up: \e905,
+mail: \e906,
+map-pin: \e907,
+phone: \e908,
+smartphone: \e909,
+twitter: \e90a,
+facebook: \e90b,
+loupe: \e90c,
+shopping-bag: \e90d,
+line: \e90e,
+instagram: \e90f,
+download: \e910,
+edit: \e911,
+external-link: \e912,
+settings: \e913,
+share-2: \e914,
+shopping-cart: \e915,
+trash-2: \e916,
+x: \e917,
+clock: \e918,
+x-circle: \e91a,
+check-circle: \e919,
+starburst: \e91b,
+starburst-outline: \e91c,
+star: \e91d,
+heart: \e91e,
+flash: \e91f,
+media-stop: \e920,
+media-play: \e922)
+
+// Wrap (l-wp)
+$wpRange: 1024 // 基本範圍
+$wpBoth: 15 // 左右間距(px)
