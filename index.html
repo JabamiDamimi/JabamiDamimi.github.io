@@ -1,22 +1,57 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Demo</title>
-    </head>
-    <body>
-        <a href="ABCShoes">ABCShoes</a>
-        <br>
-        <a href="amg-template1_html">template1</a>
-        <br>
-        <a href="amg-template2_html">template2</a>
-        <br>
-        <a href="amg-template3_html">template3</a>
-        <br>
-        <a href="amg-template4_html">template4</a>
-        <br>
-        <a href="amg-template5_html">template5</a>
-        <br>
-        <a href="amg-template6_html">template6</a>
-    </body>
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>網站模板列表</title>
+    <style>
+        body {
+            font-family: "Microsoft JhengHei", sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 2rem;
+        }
+
+        .link-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .link-card {
+            background-color: white;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        .link-card:hover {
+            transform: scale(1.05);
+            background-color: #f0f8ff;
+        }
+    </style>
+</head>
+<body>
+    <h1>網站模板列表</h1>
+    <div class="link-container">
+        <a class="link-card" href="ABCShoes">ABCShoes</a>
+        <a class="link-card" href="amg-template1_html">Template 1</a>
+        <a class="link-card" href="amg-template2_html">Template 2</a>
+        <a class="link-card" href="amg-template3_html">Template 3</a>
+        <a class="link-card" href="amg-template4_html">Template 4</a>
+        <a class="link-card" href="amg-template5_html">Template 5</a>
+        <a class="link-card" href="amg-template6_html">Template 6</a>
+    </div>
+</body>
 </html>
